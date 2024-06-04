@@ -1,0 +1,25 @@
+
+.top-repositories {
+    padding: 10px;
+}
+
+.top-repositories h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.top-repositories input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.top-repositories ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.top-repositories li {
+    padding: 5px 0;
+}
+

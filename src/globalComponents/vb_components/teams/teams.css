@@ -1,0 +1,18 @@
+.teams {
+    padding: 10px;
+}
+
+.teams h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.teams input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.teams p {
+    margin: 5px 0;
+}

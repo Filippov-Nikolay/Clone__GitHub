@@ -1,0 +1,12 @@
+.recent-activity {
+    padding: 10px;
+}
+
+.recent-activity h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.recent-activity p {
+    margin: 5px 0;
+}
