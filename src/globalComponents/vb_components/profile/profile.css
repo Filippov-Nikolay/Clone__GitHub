@@ -3,7 +3,13 @@
     align-items: center;
     padding: 10px;
 }
-
+.app-link {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.app-link:hover {
+    text-decoration: underline;
+}
 .profile-picture {
     border-radius: 50%;
     width: 20px;

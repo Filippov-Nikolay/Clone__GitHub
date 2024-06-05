@@ -6,7 +6,7 @@ const Profile = () => {
     return (
         <div className="profile">
             <img src= {img_avatar} alt="Profile" className="profile-picture" />
-            <div className="username">chiragsingla17</div>
+            <a className='app-link' href="#"><div className="username">chiragsingla17 -</div></a>
         </div>
     );
 };
