@@ -1,0 +1,58 @@
+.header{
+    background-color: #161B22;
+    padding: 1rem;
+    gap: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__wrapper{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.header__logo{
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    margin-left: 0.5rem;
+}
+
+.header__search-wrapper{
+    display: flex;
+}
+
+
+.input-placeholder {
+    padding: 10px;
+    font-size: 16px;
+    border: 0px solid #ccc; /*Border of input will delete as not needed */
+    border-radius: 4px;
+    background-color: #010409; /* Background color of INPUT */
+    color: #ffffff; /*Change the color of INPUT text */
+    width: 20rem;
+  }
+
+  .input-placeholder::placeholder {
+    color: #C9D1D9; /* Example placeholder text color */
+  }
+
+  .header__content{
+    display: flex;
+    align-items: center;
+
+  }
+  .content__wrapper{
+    display: flex;
+    gap: 25px;
+  }
+
+  .content__item-link{
+    color: #F0F6FC;
+  }
+
+  .content__item{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
