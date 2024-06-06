@@ -8,7 +8,7 @@
 }
 
 .teams input {
-    width: 100%;
+    width: 90%;
     padding: 8px;
     margin-bottom: 10px;
 }
@@ -17,11 +17,22 @@
     margin: 5px 0;
 }
 
+.team-picture {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.team-text-picture {
+    display: flex;
+    align-items: center;
+}
 /* Input and placeholder styles */
 .input-placeholder {
     padding: 10px;
     font-size: 16px;
-    border: 0px solid #ccc; /*Border of input will delete as not needed */
+    border: 0.5px solid #7c8085; /*Border of input will delete as not needed */
     border-radius: 4px;
     background-color: #010409; /* Background color of INPUT */
     color: #C9D1D9; /*Change the color of INPUT text */

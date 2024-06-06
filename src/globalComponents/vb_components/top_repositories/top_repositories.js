@@ -3,7 +3,7 @@ import './top_repositories.css';
 import chiragsingla17Image from '../sources/images/chiragsingla1716x16.png';
 import BuilderIOImage from '../sources/images/BuilderIO16x16.png';
 import UpVoxAiImage from '../sources/images/UpVoxAi16x16.png';
-
+import { FaBookBible } from "react-icons/fa6";
 const repositories = [    
 { name: "Vector", image: chiragsingla17Image, author: "chiragsingla17" },
 { name: "MorphixUI", image: chiragsingla17Image, author: "chiragsingla17" },
@@ -16,8 +16,11 @@ const repositories = [
 
 const TopRepositories = () => {
     return (
+    <div className='top-repositories-container'>
+        <hr className="separator" />
         <div className="top-repositories">
             <h2>Top Repositories</h2>
+            <button className="new-button"><FaBookBible /> New</button>
             <input type="text" placeholder="Find a repository..." class="input-placeholder" id="repoInput" />
             <ul className="repository-list">
                 {repositories.map((repo, index) => (
@@ -33,6 +36,7 @@ const TopRepositories = () => {
                 ))}
             </ul>
             <a href ="#" className='Link-muted'>Show more</a>   
+        </div>
         </div>
     );
 }; 
