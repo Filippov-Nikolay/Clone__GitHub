@@ -15,9 +15,9 @@ export function Header() {
                     <img src={Logo}/>
                 </div>
                 <div className='header__search'>
-                    <input type='text' placeholder='Search or jump to...' className='input-placeholder'>
-                        <button></button>
-                    </input>
+                    <input type='text' placeholder='Search or jump to...' className='input-placeholder'/>
+                        
+                    
                 </div>
                 <div className='header__content'>
                     <ul className='content__wrapper'>
