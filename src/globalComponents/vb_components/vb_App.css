@@ -3,6 +3,8 @@
     display: flex;
     font-weight: 13;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 
 .header {
@@ -18,7 +20,11 @@
   
   .panels {
     display: flex;
+    flex-wrap: nowrap;
     margin-top: -81px; /* Temp */
+    position: absolute;
+    width: 100%;
+    height: 110%;
   }
 .left-panel, .center-panel, .right-panel {
     padding: 10px;
@@ -26,19 +32,15 @@
 }
 
 .left-panel {
-    width: 350px;
+    width: 336px;
+    height: 100%;
     background-color: #0D1117;
     color: #fff;
 }
 
 .center-panel {
-    width: 50%;
+    width: 100%;
+    height: 100%;
     background-color: #141618;
-    color: #fff;
-}
-
-.right-panel {
-    width: 25%;
-    background-color: #1c1e21;
     color: #fff;
 }

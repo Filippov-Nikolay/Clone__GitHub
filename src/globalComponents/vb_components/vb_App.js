@@ -19,9 +19,6 @@ const App = () => {
             <div className="center-panel">
                 {/* Center panel */}
             </div>
-            <div className="right-panel">
-                {/* Right panel */}
-            </div>
             </div>
         </div>
     );
