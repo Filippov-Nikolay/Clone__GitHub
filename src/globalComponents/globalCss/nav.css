@@ -1,0 +1,41 @@
+.nav{
+    background-color: #0D1117;
+    min-height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_list-wrapper{
+    display: flex;
+    gap: 45px;
+}
+
+.nav_list-item{
+    padding: 10px;
+    transition: 0.5s all;
+    border-radius: 5px;
+}
+
+.nav_list-item:hover{
+    background-color: #171b20;
+}
+
+.nav_list-item.active {
+    border-bottom: 3px solid #f78166;
+}
+
+.list__item-link span{
+    color: #C9D1D9;
+}
+
+.item-text{
+    margin-left: 10px;
+}
+
+
+@media screen and (max-width: 1120px){
+    .item-text{
+        font-size: 13px;
+    }
+  }
