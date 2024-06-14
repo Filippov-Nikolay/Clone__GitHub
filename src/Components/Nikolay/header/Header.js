@@ -1,5 +1,5 @@
 import './css/header.css'
-import React from "react";
+import React, { useState } from "react";
 
 function LogoSvg() {
     return (
@@ -90,16 +90,96 @@ function EnterprisePlatformSvg() {
         </svg>
     )
 }
-
+function PathSvg() {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" aria-hidden="true" class="mr-1"><path fill="none" stroke="#979A9C" opacity=".4" d="M3.5.5h12c1.7 0 3 1.3 3 3v13c0 1.7-1.3 3-3 3h-12c-1.7 0-3-1.3-3-3v-13c0-1.7 1.3-3 3-3z">
+            </path><path fill="#979A9C" d="M11.8 6L8 15.1h-.9L10.8 6h1z"></path>
+        </svg>
+    )
+}
+function SearchSvg() {
+    return (
+        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-search">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"></path>
+        </svg>
+    )
+}
+function CloseSvg() {
+    return (
+        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true">
+            <path d="M2.343 13.657A8 8 0 1 1 13.658 2.343 8 8 0 0 1 2.343 13.657ZM6.03 4.97a.751.751 0 0 0-1.042.018.751.751 0 0 0-.018 1.042L6.94 8 4.97 9.97a.749.749 0 0 0 .326 1.275.749.749 0 0 0 .734-.215L8 9.06l1.97 1.97a.749.749 0 0 0 1.275-.326.749.749 0 0 0-.215-.734L9.06 8l1.97-1.97a.749.749 0 0 0-.326-1.275.749.749 0 0 0-.734.215L8 6.94Z"></path>
+        </svg>
+    )
+}
 
 export function Header() {
+    const [isHideModalWindow, setIsHideModalWindow] = useState(false);
+    const [search, setSearchValue] = useState("");
+    const [isSearchShow, setIsSearch] = useState(false);
+    // const isHideModalWindow = false;
+
+    function HideModalWindow() {
+        setIsHideModalWindow(false);
+    }
+    function ShowModalWindow() {
+        setIsHideModalWindow(true);
+    }
+    function HandleSearchChange(event) {
+        setSearchValue(event.target.value);
+        event.target.value.length != 0 ? setIsSearch(true) : setIsSearch(false);
+    }
+
     return (
         <header className="header">
+            <div className="modal-window-input">
+                <div className={isHideModalWindow ? "modal-window-input__content" : "modal-window-input__content modal-window-input__content--hide"}>
+                    <div className="modal-window-input__bg" onClick={HideModalWindow}></div>
+                    <div className="modal-window-input__item">
+                        <div className="modal-window-input__wrapper-input">
+                            <span className="modal-window-input__search-span"><SearchSvg></SearchSvg></span>
+                            <input className="modal-window-input__input" type="text" onChange={HandleSearchChange}/>
+                            <span className="modal-window-input__search-span modal-window-input__search-span--close"><CloseSvg></CloseSvg></span>
+                        </div>
+                        <div className="modal-window-input__action-list-content">
+                            <a className={isSearchShow ? "modal-window-input__action-list-link" : "modal-window-input__action-list-link modal-window-input__action-list-link--hide"} href="#">
+                                <span className="modal-window-input__search-span"><SearchSvg></SearchSvg></span>
+                                <span className="modal-window-input__action-list-output">{search}</span>
+                                <span className="modal-window-input__action-list-hint">Search all of GitHub</span>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div className="modal-window-input__item">
+                        <ul className="sub-menu__modal-window modal-window-list">
+                            <li className='modal-window-list__title-li'>Explore</li>
+                            <li className="modal-window-list__item">
+                                <a href="#" className="modal-window-list__link">
+                                    <ActionsSvg></ActionsSvg>
+                                    <div className="modal-window-list__wrapper">
+                                        <h6 className="modal-window-list__title">Actions</h6>
+                                    </div>
+                                    <span className="modal-window-input__action-list-hint">Learn More</span>
+                                </a>
+                            </li>
+                            <li className="modal-window-list__item">
+                                <a href="#" className="modal-window-list__link">
+                                    <ActionsSvg></ActionsSvg>
+                                    <div className="modal-window-list__wrapper">
+                                        <h6 className="modal-window-list__title">Actions</h6>
+                                    </div>
+                                    <span className="modal-window-input__action-list-hint">Learn More</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="modal-window-input__item">
+                        <a className="modal-window-input__link" href="#">Search syntax tips</a>
+                    </div>
+                </div>
+            </div>
             <nav className="nav">
                 <div className="nav__wrapper">
-                    <a href="#" className="logo">
-                        <LogoSvg></LogoSvg>
-                    </a>
+                    <a href="#" className="logo"><LogoSvg></LogoSvg></a>
                     <ul className="nav__menu">
                         <li className="nav__item"><a href="#" className="nav__link">product
                         <span className="nav__span">
@@ -373,7 +453,13 @@ export function Header() {
                     </ul>
                 </div>
                 <div className="nav__wrapper">
-                    <input className="nav__input" type="text" placeholder="Search GitHub" />
+                    <button className="nav__btn-search" onClick={ShowModalWindow}>
+                        <div className="nav__btn-wrapper">
+                            <span className="nav__btn-span nav__btn-span--search"><SearchSvg></SearchSvg></span>
+                            <span className="nav__btn-text">Search GitHub</span>
+                        </div>
+                        <span className="nav__btn-span"><PathSvg></PathSvg></span>
+                    </button>
                     <a className="nav__btn" href="#">Sign in</a>
                     <a className="nav__btn nav__btn--border" href="#">Sign up</a>
                 </div>
