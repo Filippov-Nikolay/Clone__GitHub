@@ -1,0 +1,17 @@
+.application-security {
+    display: flex;
+}
+.application-security__content {
+    margin: 10px 0;
+    margin-bottom: 100px;
+}
+.fact--application-security {
+    margin-bottom: 75px;
+}
+.application-security__productivity-block-anime__second {
+    z-index: 1;
+    right: -40px;
+    transform: translateY(-15%);
+}
+.application-security__productivity-block-anime__blur {
+}

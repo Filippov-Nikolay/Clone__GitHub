@@ -45,11 +45,17 @@
 .event__interval-middle--green-to-transparent {
     background: linear-gradient(#2DA44E 70%, transparent);
 }
-.event__interval-middle--transparent-to-green {
+.event__interval-middle--transparent-to-blue {
     background: linear-gradient(transparent, #33b3ae 30%);
 }
 .event__interval-middle--blue-to-transparent {
     background: linear-gradient(#33b3ae 70%, transparent);
+}
+.event__interval-middle--transparent-to-pink {
+    background: linear-gradient(transparent, #F778BA 30%);
+}
+.event__interval-middle--pink-to-transparent {
+    background: linear-gradient(#F778BA 70%, transparent);
 }
 .event__middle {
     position: relative;
@@ -72,13 +78,14 @@
 .event__middle--purple::after {
     background-color: #7c72ff;
 }
-.event__middle--green {
-}
 .event__middle--green::after {
     background-color: #3fb950;
 }
 .event__middle--blue::after {
     background-color: #33b3ae;
+}
+.event__middle--pink::after {
+    background-color: #F778BA;
 }
 .event__middle path {
     fill: #fff;
@@ -87,4 +94,7 @@
     position: absolute;
     bottom: 50px;
     left: 50%;
+}
+.event--card {
+    height: 200px;
 }

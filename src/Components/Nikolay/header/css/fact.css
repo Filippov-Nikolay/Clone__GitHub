@@ -20,6 +20,10 @@
     color: #33b3ae;
     border: 1px solid #33b3ae;
 }
+.fact__title-top--pink {
+    color: #F778BA;
+    border: 1px solid #F778BA;
+}
 .fact__title {
     margin: 16px 0;
 
@@ -32,6 +36,9 @@
 }
 .fact__title--blue {
     color: #33b3ae;
+}
+.fact__title--pink {
+    color: #F778BA;
 }
 .fact__sub-text {
     margin-bottom: 16px;

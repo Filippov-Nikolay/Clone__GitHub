@@ -4,10 +4,12 @@ import {
     CodespacesSvg, GitHubCopilotSvg, CodeReviewSvg,
     IssuesSvg, DiscussionsSvg, ArrowDownSvg, LinkSvg,
     EnterprisePlatformSvg, PathSvg, SearchSvg, CloseSvg, 
-    OcticonCode, ArrowSymbolMktg, OcticonBriefcase, OcticonLock
+    OcticonCode, ArrowSymbolMktg, OcticonBriefcase, OcticonLock,
+    OcticonCodeConduct
 } from '../svgComponents/svgComponents'
 import logoNLO from '../img/header_element_nlo.png'
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import debounce from 'lodash.debounce';
 import Tilt from 'react-vanilla-tilt'
 
 function OurPartners() {
@@ -37,23 +39,28 @@ function OurPartners() {
         </div>
     )
 }
-
 function Card() {
-    let cards = document.querySelectorAll('.card-content__item');
-    console.log(cards);
-    cards.forEach (card => {
-        card.onmousemove = function (e) {
-            let x = e.pageX - card.offsetLeft;
-            let y = e.pageY - card.offsetTop;
-
-            card.style.setProperty('--x', x + 'px');
-            card.style.setProperty('--y', y + 'px');
-        }
-    });
+    const cardRefs = {
+        cardRef1: useRef(null),
+        cardRef2: useRef(null),
+        cardRef3: useRef(null),
+        cardRef4: useRef(null)
+    };
+    
+    const handleMouseMove = debounce((e, refName) => {
+    const card = cardRefs[refName].current;
+    if (card) {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--x', x + 'px');
+        card.style.setProperty('--y', y + 'px');
+    }
+    }, 1);
 
     return (
         <div className="card-content">
-            <div className="card-content__item">
+            <div className="card-content__item card-content__item--green" onMouseMove={(e) => handleMouseMove(e, 'cardRef1')} ref={cardRefs.cardRef1}>
                 <div className="card-content__main">
                     <h3 className="card-content__title">
                         <span className="card-content__span">GitHub Actions </span>
@@ -66,7 +73,7 @@ function Card() {
                 </div>
             </div>
             <div className="card-content__wrapper-flex">
-                <div className="card-content__item card-content__item--column">
+                <div className="card-content__item card-content__item--green card-content__item--column" onMouseMove={(e) => handleMouseMove(e, 'cardRef2')} ref={cardRefs.cardRef2}> 
                     <div className="card-content__main">
                         <h3 className="card-content__title">
                             <span className="card-content__span">GitHub Codespaces </span>
@@ -78,7 +85,7 @@ function Card() {
                     <img src="https://github.githubassets.com/assets/illu-codespaces-1d2d17e8b2b7.png" alt=""/>
                     </div>
                 </div>
-                <div className="card-content__item card-content__item--column">
+                <div className="card-content__item card-content__item--green card-content__item--column" onMouseMove={(e) => handleMouseMove(e, 'cardRef3')} ref={cardRefs.cardRef3}>
                     <div className="card-content__main">
                         <h3 className="card-content__title">
                             <span className="card-content__span">GitHub Mobile and Copilot </span>
@@ -91,26 +98,256 @@ function Card() {
                     </div>
                 </div>
             </div>
+            <div className='event event--card'>
+                <div className="event__interval-middle event__interval-middle--transparent-to-blue"></div>
+            </div>
         </div>
     )
 }
+function CardFaster() {
+    const cardRefs = {
+        cardRef1: useRef(null),
+        cardRef2: useRef(null),
+        cardRef3: useRef(null),
+        cardRef4: useRef(null)
+    };
+    
+    const handleMouseMove = debounce((e, refName) => {
+    const card = cardRefs[refName].current;
+    if (card) {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--x', x + 'px');
+        card.style.setProperty('--y', y + 'px');
+    }
+    }, 1);
 
-function ApplicationSecurity() {
     return (
+        <div className="card-content">
+            <div className="card-content__item card-content__item--blue" onMouseMove={(e) => handleMouseMove(e, 'cardRef1')} ref={cardRefs.cardRef1}>
+                <div className="card-content__main">
+                    <h3 className="card-content__title">
+                        <span className="card-content__span">Code scanning </span>
+                        is our code analysis tool that helps you remediate issues in your code.
+                    </h3>
+                    <a href="#" className="btn-link">Download the latest SAST ebook<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                </div>
+                <div className="card-content__wrapper-img">
+                    <img src="https://github.githubassets.com/assets/illu-code-scanning-fc9dfb212aa3.png" alt=""/>
+                </div>
+            </div>
+            <div className="card-content__wrapper-flex">
+                <div className="card-content__item card-content__item--blue card-content__item--column" onMouseMove={(e) => handleMouseMove(e, 'cardRef2')} ref={cardRefs.cardRef2}> 
+                    <div className="card-content__main">
+                        <h3 className="card-content__title">
+                            <span className="card-content__span">Dependabot makes </span>
+                            it easy to find and fix vulnerable dependencies in your supply chain.
+                        </h3>
+                        <a href="#" className="btn-link">Explore Dependabot<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                    </div>
+                    <div className="card-content__wrapper-img">
+                    <img src="https://github.githubassets.com/assets/illu-dependabot-d98c73cc6724.png" alt=""/>
+                    </div>
+                </div>
+                <div className="card-content__item card-content__item--blue card-content__item--column" onMouseMove={(e) => handleMouseMove(e, 'cardRef3')} ref={cardRefs.cardRef3}>
+                    <div className="card-content__main">
+                        <h3 className="card-content__title">
+                            <span className="card-content__span">Secret scanning </span>
+                            automatically looks for partner patterns and prevents fraudulent use of accidentally committed secrets.
+                        </h3>
+                        <a href="#" className="btn-link">Download GitHub Mobile<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                    </div>
+                    <div className="card-content__wrapper-img">
+                        <img src="https://github.githubassets.com/assets/illu-secret-scanning-2-88fb429376d6.png" alt=""/>
+                    </div>
+                </div>
+            </div>
+            <div className='event event--card'>
+                <div className="event__interval-middle event__interval-middle--transparent-to-pink"></div>
+            </div>
+        </div>
+    )
+}
+function ApplicationSecurity() {
+    const cardRefs = {
+        cardRef1: useRef(null)
+    };
+    
+    const handleMouseMove = debounce((e, refName) => {
+    const card = cardRefs[refName].current;
+    if (card) {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--x', x + 'px');
+        card.style.setProperty('--y', y + 'px');
+    }
+    }, 1);
+
+    return (
+        <>
         <div className="application-security">
             <div className='event'>
-                <div className="event__interval-middle event__interval-middle--transparent-to-blue"></div>
                 <div className="event__middle event__middle--blue">
-                        <OcticonLock></OcticonLock>
-                    </div>
+                    <OcticonLock></OcticonLock>
+                </div>
                 <div className="event__interval-middle event__interval-middle--blue-to-transparent"></div>
             </div>
+            <div className="application-security__content">
+                <h2 className="content-title">Application security</h2>
+                <h3 className="content-sub-title">
+                    <span class="content-sub-title__accent content-sub-title__accent--blue">Empower developers</span>
+                    With GitHub, you can secure code in minutes.
+                </h3>
+            </div>
+        </div>
+        <div className="card-content">
+            <div className="productivity__main">
+                <div className="productivity-block-anime">
+                    <div className="card-content__item card-content__item--blue" onMouseMove={(e) => handleMouseMove(e, 'cardRef1')} ref={cardRefs.cardRef1}>
+                        <div className="card-content__main">
+                            <h3 className="card-content__title">
+                                <span className="card-content__span">GitHub Actions </span>
+                                automates your build, test, and deployment workflow with simple and secure CI/CD.
+                            </h3>
+                            <a href="#" className="btn-link">Discover GitHub Actions<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                        </div>
+                        <div className="card-content__wrapper-img">
+                            <img src="https://github.githubassets.com/assets/illu-actions-2-c5178134f381.png" alt=""/>
+                        </div>
+                    </div>
+                    <img className='application-security__productivity-block-anime__blur productivity-block-anime__blur' src="https://github.githubassets.com/assets/bg-glow-blue-036b8dc2d1ce.png" alt=""/>
+                    <div class="productivity-block-anime__second application-security__productivity-block-anime__second">
+                        <img src="https://github.githubassets.com/assets/illu-ghas-list-84af1f1ce2b8.png" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="river">
+            <div className='event'>
+                <div className="event__interval-middle event__interval-middle--transparent-to-blue"></div>
+                <div className="event__interval-middle event__interval-middle--blue-to-transparent"></div>
+                <div className='event__interval-more-info'>
+                    <img src="https://github.githubassets.com/assets/git-branch-security-2-f6a799957581.svg" alt=""></img>
+                </div>
+            </div>
             <div className="river__wrapper">
-                <div className="fact">
+                <div className="river__content">
+                    <h2 className="river__title">
+                        <span className='river__span-title'>GitHub Advanced Security</span> enables you to find and fix vulnerabilities with ease and ship secure code quickly.
+                    </h2>
+                    <a href="#" className="btn-link">Dive into GitHub Advanced Security <span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                </div>
+                <div className="fact fact--application-security">
                     <div className="fact__content">
                         <div className="fact__title-top fact__title-top--blue">Did you know?</div>
-                        <h3 className="fact__title fact__title--blue">Empower developers</h3>
-                        <p className="fact__sub-text">With GitHub, you can secure code in minutes.</p>
+                        <h3 className="fact__title fact__title--blue">7x faster</h3>
+                        <p className="fact__sub-text">vulnerability fixes with GitHub<sup>1</sup></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </>
+    )
+}
+function Collaboration() {
+    const cardRefs = {
+        cardRef1: useRef(null)
+    };
+    
+    const handleMouseMove = debounce((e, refName) => {
+    const card = cardRefs[refName].current;
+    if (card) {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--x', x + 'px');
+        card.style.setProperty('--y', y + 'px');
+    }
+    }, 1);
+
+    return (
+        <>
+        <div className="application-security">
+            <div className='event'>
+                <div className="event__middle event__middle--pink">
+                    <OcticonCodeConduct></OcticonCodeConduct>
+                </div>
+                <div className="event__interval-middle event__interval-middle--pink-to-transparent"></div>
+            </div>
+            <div className="application-security__content">
+                <h2 className="content-title">Collaboration</h2>
+                <h3 className="content-sub-title">
+                    <span class="content-sub-title__accent content-sub-title__accent--pink">Supercharge collaboration</span>
+                    GitHub helps your teams work more efficiently together.
+                </h3>
+            </div>
+        </div>
+        <div className="card-content">
+            <div className="productivity__main">
+                <div className="productivity-block-anime">
+                    <div className="productivity-block-anime__first">
+                        <img src="https://github.githubassets.com/assets/issues-plan-2-46d1ce1d4519.png" alt=""/>
+                    </div>
+                    <img className='application-security__productivity-block-anime__blur productivity-block-anime__blur' src="https://github.githubassets.com/assets/bg-glow-purple-6e9a6a96cb04.png" alt=""/>
+                    <div class="productivity-block-anime__second application-security__productivity-block-anime__second">
+                        <img src="https://github.githubassets.com/assets/illu-projects-2-26077f1dd188.png" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="river">
+            <div className='event'>
+                <div className="event__interval-middle event__interval-middle--transparent-to-pink"></div>
+                <div className="event__interval-middle event__interval-middle--pink-to-transparent"></div>
+                <div className='event__interval-more-info'>
+                    <img src="https://github.githubassets.com/assets/git-branch-collaboration-2-e46b1fb1d363.svg" alt=""></img>
+                </div>
+            </div>
+            <div className="river__wrapper">
+                <div className="river__content">
+                    <h2 className="river__title">
+                        <span className='river__span-title'>GitHub Issues and GitHub Projects</span> supply project management tools that adapt to your team alongside your code.
+                    </h2>
+                    <a href="#" className="btn-link">Get started with GitHub Issues<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                </div>
+                <div className="fact fact--application-security">
+                    <div className="fact__content">
+                        <div className="fact__title-top fact__title-top--pink">Did you know?</div>
+                        <h3 className="fact__title fact__title--pink">80%</h3>
+                        <p className="fact__sub-text">reduction in onboarding time with GitHub<sup>2</sup></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </>
+    )
+}
+
+function River() {
+    return (
+        <div className="river">
+            <div className='event'>
+                <div className="event__interval-middle event__interval-middle--transparent-to-green"></div>
+                <div className="event__interval-middle event__interval-middle--green-to-transparent"></div>
+                <div className='event__interval-more-info'>
+                    <img src="https://github.githubassets.com/assets/git-branch-productivity-c304b83d09c7.svg" alt=""></img>
+                </div>
+            </div>
+            <div className="river__wrapper">
+                <div className="river__content">
+                    <h2 className="river__title">
+                        <span className='river__span-title'>GitHub Copilot</span> empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.
+                    </h2>
+                    <a href="#" className="btn-link">Explore GitHub Copilot <span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                </div>
+                <div className="fact">
+                    <div className="fact__content">
+                        <div className="fact__title-top fact__title-top--green">Did you know?</div>
+                        <h3 className="fact__title fact__title--green">22% increase</h3>
+                        <p className="fact__sub-text">in developer productivity after three years with GitHub</p>
+                        <a href="#" className="btn-link">Read the report<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
                     </div>
                 </div>
             </div>
@@ -158,7 +395,7 @@ function HeaderContent() {
                 <div className="productivity__event-info">
                     <h2 className="content-title">Productivity</h2>
                     <h3 className="content-sub-title">
-                        <span class="content-sub-title__accent">Accelerate innovation</span>
+                        <span class="content-sub-title__accent content-sub-title__accent--green">Accelerate innovation</span>
                         Our AI-powered platform increases the pace of software development.
                     </h3>
                 </div>
@@ -174,33 +411,11 @@ function HeaderContent() {
                     </div>
                 </div>
             </div>
-            <div className="river">
-                <div className='event'>
-                    <div className="event__interval-middle event__interval-middle--transparent-to-green"></div>
-                    <div className="event__interval-middle event__interval-middle--green-to-transparent"></div>
-                    <div className='event__interval-more-info'>
-                        <img src="https://github.githubassets.com/assets/git-branch-productivity-c304b83d09c7.svg" alt=""></img>
-                    </div>
-                </div>
-                <div className="river__wrapper">
-                    <div className="river__content">
-                        <h2 className="river__title">
-                            <span className='river__span-title'>GitHub Copilot</span> empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.
-                        </h2>
-                        <a href="#" className="btn-link">Explore GitHub Copilot <span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
-                    </div>
-                    <div className="fact">
-                        <div className="fact__content">
-                            <div className="fact__title-top fact__title-top--green">Did you know?</div>
-                            <h3 className="fact__title fact__title--green">22% increase</h3>
-                            <p className="fact__sub-text">in developer productivity after three years with GitHub</p>
-                            <a href="#" className="btn-link">Read the report<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <River></River>
             <Card></Card>
             <ApplicationSecurity></ApplicationSecurity>
+            <CardFaster></CardFaster>
+            <Collaboration></Collaboration>
         </div>
         </>
     )
