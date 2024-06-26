@@ -10,27 +10,27 @@ import Emblem4 from '../picture/Emblem4.svg';
 
 function EmblemOrganizations() {
     return (
-        <div className='aside__organizations'>
-            <h3 className='aside__title-name'>Organizations</h3>
-            <ul className='organizations-emblem__list'>
-                <li className='organizations-emblem__item'>
+        <div className='profile-aside__organizations'>
+            <h3 className='profile-aside__title-name'>Organizations</h3>
+            <ul className='profile-organizations-emblem__list'>
+                <li className='profile-organizations-emblem__item'>
                     <a href='#'>
-                        <img className='organizations-emblem__img' src={Emblem1} alt='Emblem1'/>
+                        <img className='profile-organizations-emblem__img' src={Emblem1} alt='Emblem1'/>
                     </a>
                 </li>
-                <li className='organizations-emblem__item'>
+                <li className='profile-organizations-emblem__item'>
                     <a href='#'>
-                        <img className='organizations-emblem__img' src={Emblem2} alt='Emblem2'/>
+                        <img className='profile-organizations-emblem__img' src={Emblem2} alt='Emblem2'/>
                     </a>
                 </li>
-                <li className='organizations-emblem__item'>
+                <li className='profile-organizations-emblem__item'>
                     <a href='#'>
-                        <img className='organizations-emblem__img' src={Emblem3} alt='Emblem3'/>
+                        <img className='profile-organizations-emblem__img' src={Emblem3} alt='Emblem3'/>
                     </a>
                 </li>
-                <li className='organizations-emblem__item'>
+                <li className='profile-organizations-emblem__item'>
                     <a href='#'>
-                        <img className='organizations-emblem__img' src={Emblem4} alt='Emblem4'/>
+                        <img className='profile-organizations-emblem__img' src={Emblem4} alt='Emblem4'/>
                     </a>
                 </li>
             </ul>    
@@ -40,48 +40,48 @@ function EmblemOrganizations() {
 
 export function Aside() {
     return (
-        <aside className='aside'>
-                <div className='aside__logo'>   
+        <aside className='profile-aside'>
+                <div className='profile-aside__logo'>   
                     <img src={LogoProfile} alt='Logo Profile'/>
                 </div>
-                <div className='aside__editor'>
+                <div className='profile-aside__editor'>
                     {/* soon */}
                 </div>
-                <div className='aside__main'>
-                    <div className='aside__name'>
-                        <h2 className='aside__name-main'>chirag singla</h2>
-                        <h3 className='aside__name-sub'>chiragsingla17</h3>
+                <div className='profile-aside__main'>
+                    <div className='profile-aside__name'>
+                        <h2 className='profile-aside__name-main'>chirag singla</h2>
+                        <h3 className='profile-aside__name-sub'>chiragsingla17</h3>
                     </div>
-                    <div className='aside__bio'>
-                        <span className='aside__bio-text'>Currently working in KAN LABs, NYC USA as an ML Engineer(Remote)</span>
+                    <div className='profile-aside__bio'>
+                        <span className='profile-aside__bio-text'>Currently working in KAN LABs, NYC USA as an ML Engineer(Remote)</span>
                     </div>
-                    <div className='aside__func'>
-                        <button className='aside__btn-edit'>Edit profile</button>
-                        <div className='aside__content-wrapper'>
-                            <a href='#' className='aside__links'>
-                                <FollowersSVG /><span className='aside__links-follow'> 12</span> followers
+                    <div className='profile-aside__func'>
+                        <button className='profile-aside__btn-edit'>Edit profile</button>
+                        <div className='profile-aside__content-wrapper'>
+                            <a href='#' className='profile-aside__links'>
+                                <FollowersSVG /><span className='profile-aside__links-follow'> 12</span> followers
                             </a>
-                            <a href='#' className='aside__links'>
-                                 <span className='aside__links-follow'>3</span> following
+                            <a href='#' className='profile-aside__links'>
+                                 <span className='profile-aside__links-follow'>3</span> following
                             </a>
                         </div>
                     </div>
-                    <div className='aside__info'>
-                        <div className='aside__content-wrapper'>
-                            <GeoSVG /> <span className='country__name'> Delhi</span>
+                    <div className='profile-aside__info'>
+                        <div className='profile-aside__content-wrapper'>
+                            <GeoSVG /> <span className='profile-country__name'> Delhi</span>
                         </div>
-                        <div className='aside__content-wrapper'>
-                            <LinksSVG />  <span className='link__social'>https://neuralai.co/</span>
+                        <div className='profile-aside__content-wrapper'>
+                            <LinksSVG />  <span className='profile-link__social'>https://neuralai.co/</span>
                         </div>
                     </div>
-                    <div className='aside__achievements'>
-                        <h3 className='aside__title-name'>Achievements</h3>
-                        <div className='aside__achiev-logo'>
-                            <img src={Achiev} alt='Achievements'/>
+                    <div className='profile-aside__achievements'>
+                        <h3 className='profile-aside__title-name'>Achievements</h3>
+                        <div className='profile-aside__achiev-logo'>
+                            <img src={Achiev} alt='profile-Achievements'/>
                         </div>
-                        <div className='aside__content-wrapper'>
-                            <button className='aside__btn-beta'>Beta</button>
-                            <a href='#' className='aside__link-feedback'>Send feedback</a>
+                        <div className='profile-aside__content-wrapper'>
+                            <button className='profile-aside__btn-beta'>Beta</button>
+                            <a href='#' className='profile-aside__link-feedback'>Send feedback</a>
                      </div>
                     </div>
                     <EmblemOrganizations />

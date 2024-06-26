@@ -24,36 +24,36 @@ export function Nav() {
     };
 
     return (
-        <nav className='nav'>
-            <ul className='nav__list-wrapper'>
+        <nav className='profile-nav'>
+            <ul className='profile-nav__list-wrapper'>
                 {navItems.map((item, index) => (
                     <li
                         key={index}
-                        className={`nav__list-item ${activeIndex === index ? 'active' : ''}`}
+                        className={`profile-nav__list-item ${activeIndex === index ? 'profile-active' : ''}`}
                         onClick={() => handleItemClick(index)}
                     >
-                        <a href='#' className='list__item-link'>
+                        <a href='#' className='profile-list__item-link'>
                             {item.icon}
-                            <span className='item-text'>{item.name}</span>
+                            <span className='profile-item-text'>{item.name}</span>
                         </a>
                     </li>
                 ))}
                 {/* Dropdown button */}
-                <li className='nav__list-item dropdown-toggle' onClick={toggleDropdown}>
-                    <a href='#' className='list__item-link'>
+                <li className='profile-nav__list-item profile-dropdown-toggle' onClick={toggleDropdown}>
+                    <a href='#' className='profile-list__item-link'>
                         <DotsSvg></DotsSvg>
                     </a>
                     {/* Dropdown content */}
                     {showDropdown && (
-                        <ul className='dropdown-content'>
+                        <ul className='profile-dropdown-content'>
                             {navItems.map((item, index) => (
                                 <li
                                     key={index}
-                                    className={`dropdown-item ${activeIndex === index ? 'active' : ''}`}
+                                    className={`profile-dropdown-item ${activeIndex === index ? 'profile-active' : ''}`}
                                     onClick={() => handleItemClick(index)}>
-                                    <a href='#' className='dropdown-item-link'>
+                                    <a href='#' className='profile-dropdown-item-link'>
                                         {item.icon}
-                                        <span className='item-text'>{item.name}</span>
+                                        <span className='profile-item-text'>{item.name}</span>
                                     </a>
                                 </li>
                             ))}

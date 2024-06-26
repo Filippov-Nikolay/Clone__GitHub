@@ -9,11 +9,11 @@ import { Aside } from '../globalComponents/aside/aside.js';
 export function Profile() {
 
     return(
-        <div className='container'>
+        <div className='profile-container'>
             <Header/>
             <Nav/>
             <main>
-                <div className='content'>
+                <div className='profile-content'>
                     <Aside/>
                 </div>
             </main>

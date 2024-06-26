@@ -1,49 +1,49 @@
-.aside{
+.profile-aside{
     margin-top: 32px;
     width: 296px;
 }
 
-.aside__logo{
+.profile-aside__logo{
 
 }
 
-.aside__editor{
+.profile-aside__editor{
 
 }
 
-.aside__main{
+.profile-aside__main{
 
 }
 
-.aside__name{
+.profile-aside__name{
     padding:  10px 0;
 }
 
-.aside__name-main{
+.profile-aside__name-main{
     color: #C9D1D9;
     font-weight: 700;
 }
 
-.aside__name-sub{
+.profile-aside__name-sub{
     color: #8B949E;
     font-weight: 400;
 }
 
-.aside__bio{
+.profile-aside__bio{
     padding: 15px 0;
    
 }
 
-.aside__bio-text{
+.profile-aside__bio-text{
     color: #C9D1D9;
     font-size: 17px;
 }
 
-.aside__func{
+.profile-aside__func{
     padding: 10px 0;
 }
 
-.aside__btn-edit{
+.profile-aside__btn-edit{
     padding: 8px 16px;
     margin-bottom: 10px;
     font-size: 16px;
@@ -57,62 +57,62 @@
     transition: 0.5s all;
 }
 
-.aside__btn-edit:hover{
+.profile-aside__btn-edit:hover{
     background-color: #2a2f36;
 }
 
-.aside__content-wrapper{
+.profile-aside__content-wrapper{
     display: flex;
     align-items: center;
 
     gap: 10px;
 }
-.aside__links{
+.profile-aside__links{
     color:  #8B949E;
 }
 
-.aside__links:hover{
+.profile-aside__links:hover{
     color: #58A6FF;
 }
 
-.aside__links-follow{
+.profile-aside__links-follow{
     color: #C9D1D9 ;
 }
 
-.aside__links:hover .aside__links-follow  {
+.profile-aside__links:hover .aside__links-follow  {
     color: #58A6FF;
 }
 
-.aside__links svg path{
+.profile-aside__links svg path{
     fill: currentColor; 
 }
 
-.aside__info{
+.profile-aside__info{
     padding: 10px 0;
 }
 
-.country__name{
+.profile-country__name{
     color: #C9D1D9;
 }
-.link__social{
+.profile-link__social{
     color: #C9D1D9;
 }
 
-.aside__achievements{
+.profile-aside__achievements{
     padding: 10px 0;
 }
 
-.aside__title-name{
+.profile-aside__title-name{
     color: #C9D1D9;
     margin-bottom: 15px;
 }
 
-.aside__achiev-logo{
+.profile-aside__achiev-logo{
     margin-bottom: 15px;
     cursor: pointer;
 }
 
-.aside__btn-beta{
+.profile-aside__btn-beta{
     background-color: #0D1117;
     border-radius: 15px;
     border: 1px solid #3FB950;
@@ -121,74 +121,74 @@
     cursor: pointer;
 }
 
-.aside__btn-beta:hover{
+.profile-aside__btn-beta:hover{
     background-color: #3d804689;
 }
 
-.aside__link-feedback{
+.profile-aside__link-feedback{
     color: #58A6FF;
 }
 
-.aside__link-feedback:hover{
+.profile-aside__link-feedback:hover{
     color: #6a99cf8f;
     text-decoration: underline;
 }
 
-.aside__organizations{
+.profile-aside__organizations{
     padding: 10px 0;
 }
 
-.organizations-emblem__list{
+.profile-organizations-emblem__list{
     display: flex;
 }
 
-.organizations-emblem__item:not(:last-child){
+.profile-organizations-emblem__item:not(:last-child){
     margin-right: 5px;
 }
 
 
 @media screen and (max-width: 1024px) {
-    .aside{
+    .profile-aside{
         margin-top: 32px;
         width: 226px;
     }
 
-    .aside__btn-edit{
+    .profile-aside__btn-edit{
 
         font-size: 14px;
         width: 220px;
 
     }
 
-    .aside__name-main{
+    .profile-aside__name-main{
         font-size: 20px;
     }
     
-    .aside__name-sub{
+    .profile-aside__name-sub{
         font-size: 15px;
     }
 
-    .aside__bio-text{
+    .profile-aside__bio-text{
         font-size: 13px;
     }
 
-    .aside__links{
+    .profile-aside__links{
         font-size: 14px;
     }
 
-    .country__name{
+    .profile-country__name{
         font-size: 14px;
     }
 
-    .link__social{
+    .profile-link__social{
         font-size: 14px;
     }
 
-    .aside__title-name{
+    .profile-aside__title-name{
         font-size: 14px;
     }
 
-    .aside__achiev-logo{
+    .profile-aside__achiev-logo{
         width: 52px;
     }
 }
