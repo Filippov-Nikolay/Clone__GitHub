@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../globalCss/header.css'
-import { LogoSVG,NotificationSVG,MinusSVG,ProfileLogoSVG,SearchSvg,SearchSVG,PathSvg } from '../picture/SvgComponents.js'
+import {NotificationSVG,MinusSVG,ProfileLogoSVG,SearchSvg,SearchSVG,PathSvg } from '../picture/SvgComponents.js'
 import LogoProfile from '../picture/LogoProfile.png';
 
 
