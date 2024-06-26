@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid #c9d1d92c;
+    position: relative; /* Добавлено для позиционирования кнопки абсолютно */
 }
 
 .profile-nav__list-wrapper {
@@ -15,15 +16,13 @@
 }
 
 .profile-nav__list-item {
-    padding: 10px;
+    padding: 9px;
     transition: 0.5s all;
     border-radius: 5px;
-    border-bottom: 3px solid #0d1117;
+
 }
 
-.profile-nav__list-item:hover {
-    background-color: #171b20;
-}
+
 
 .profile-nav__list-item.active {
     border-bottom: 3px solid #f78166;
@@ -38,8 +37,10 @@
 }
 
 .profile-dropdown-toggle {
-    position: relative;
+    position: absolute; /* Изменено с relative на absolute */
+    right: 10px; /* Добавлено для выравнивания справа */
     display: none;
+    top: 0;
 }
 
 .profile-dropdown-content {
@@ -64,7 +65,6 @@
 
 @media screen and (max-width: 768px) {
     .profile-nav__list-wrapper {
-        flex-wrap: wrap;
         justify-content: space-between;
     }
 
@@ -83,7 +83,11 @@
         border-top: 1px solid #c9d1d92c;
     }
 
-    profile-.dropdown-content .profile-dropdown-item {
+    .profile-dropdown-content .profile-dropdown-item {
         display: block;
+    }
+
+    .profile-item-text {
+        color: #c9d1d9;
     }
 }

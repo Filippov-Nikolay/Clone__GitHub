@@ -96,6 +96,10 @@
     cursor: pointer;
   }
 
+  .profile-content__logo{
+    width: 21px;
+  }
+
   @media screen and (max-width: 1120px){
     .profile-btn-input{
       display: none;

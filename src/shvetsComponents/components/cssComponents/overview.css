@@ -1,0 +1,34 @@
+.article{
+    grid-column: 2 / span 2;
+    min-width: 0;
+}
+
+.section{
+    margin-top: 34px;
+    margin-left: 25px;
+}
+
+.article__wrapper{
+
+}
+
+.article__container{
+   display: flex;
+   background-color: #388afd4e;
+   border: 1px solid #388BFD;
+   padding: 25px 25px;
+   border-radius: 5px;
+}
+
+.article__container-text{
+    color: #C9D1D9;
+    margin-right: 1.5rem;
+}
+
+.article__container--link{
+    color: #58A6FF;
+}
+
+.article__container-btn{
+
+}

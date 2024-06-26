@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../globalCss/nav.css';
-import { OverviewSVG, RepositoriesSVG, ProjectsSVG, PackagesSVG, StarsSVG,DotsSvg } from '../picture/SvgComponents.js';
+import { OverviewSVG, RepositoriesSVG, ProjectsSVG, PackagesSVG, StarsSVG, DotsSvg } from '../picture/SvgComponents.js';
 
 const navItems = [
     { name: 'Overview', icon: <OverviewSVG /> },
@@ -41,7 +41,7 @@ export function Nav() {
                 {/* Dropdown button */}
                 <li className='profile-nav__list-item profile-dropdown-toggle' onClick={toggleDropdown}>
                     <a href='#' className='profile-list__item-link'>
-                        <DotsSvg></DotsSvg>
+                        <DotsSvg />
                     </a>
                     {/* Dropdown content */}
                     {showDropdown && (
@@ -50,7 +50,8 @@ export function Nav() {
                                 <li
                                     key={index}
                                     className={`profile-dropdown-item ${activeIndex === index ? 'active' : ''}`}
-                                    onClick={() => handleItemClick(index)}>
+                                    onClick={() => handleItemClick(index)}
+                                >
                                     <a href='#' className='profile-dropdown-item-link'>
                                         {item.icon}
                                         <span className='profile-item-text'>{item.name}</span>

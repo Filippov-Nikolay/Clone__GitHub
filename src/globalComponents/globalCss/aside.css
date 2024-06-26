@@ -1,6 +1,7 @@
 .profile-aside{
     margin-top: 32px;
     width: 296px;
+    grid-row: 1;
 }
 
 .profile-aside__logo{

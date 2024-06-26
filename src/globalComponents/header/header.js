@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../globalCss/header.css'
 import { LogoSVG,NotificationSVG,MinusSVG,ProfileLogoSVG,SearchSvg,SearchSVG,PathSvg } from '../picture/SvgComponents.js'
 import LogoProfile from '../picture/LogoProfile.png';
@@ -38,8 +38,7 @@ export function Header() {
                         <a href='#'><NotificationSVG></NotificationSVG></a>
                     </li>
                     <li className='profile-content__item'>
-                        <a href='#'><ProfileLogoSVG></ProfileLogoSVG></a>
-                        <a href='#'><MinusSVG></MinusSVG></a>
+                        <a href='#'><img className='profile-content__logo' src={LogoProfile}/></a>
                     </li>
                 </ul>
             </div>
