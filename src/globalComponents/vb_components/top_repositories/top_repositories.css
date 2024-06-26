@@ -5,7 +5,6 @@
 }
 
 .new-button {
-    position: absolute;
     right: 20px;
     top: 20px;
     background-color: #2ea44f;
@@ -58,7 +57,13 @@
     list-style-type: none;
     padding: 0;
 }
-
+.repository-header-wrapper
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
 .top-repositories li {
     padding: 5px 0;
 }

@@ -19,20 +19,22 @@ const TopRepositories = () => {
     <div className='top-repositories-container'>
         <hr className="separator" />
         <div className="top-repositories">
+           <div className='repository-header-wrapper'>
             <h2>Top Repositories</h2>
             <button className="new-button"><FaBookBible /> New</button>
+            </div>
             <input type="text" placeholder="Find a repository..." class="input-placeholder" id="repoInput" />
             <ul className="repository-list">
                 {repositories.map((repo, index) => (
-                   <a href='#' className='Link-repo'> <li key={index} className="repository-item"> 
+                    <li key={index} className="repository-item"> <a href='#' className='Link-repo'>
                         <img src={repo.image} alt={repo.author} className="repository-image" />
                         <div className="repository-info">
                         <span className="repository-author">{repo.author} /</span>
                         <span className="repository-name"> {repo.name}</span>
 
                          
-                        </div>
-                    </li> </a>
+                        </div> </a>
+                    </li> 
                 ))}
             </ul>
             <a href ="#" className='Link-muted'>Show more</a>   
