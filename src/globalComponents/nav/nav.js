@@ -29,7 +29,7 @@ export function Nav() {
                 {navItems.map((item, index) => (
                     <li
                         key={index}
-                        className={`profile-nav__list-item ${activeIndex === index ? 'profile-active' : ''}`}
+                        className={`profile-nav__list-item ${activeIndex === index ? 'active' : ''}`}
                         onClick={() => handleItemClick(index)}
                     >
                         <a href='#' className='profile-list__item-link'>
@@ -49,7 +49,7 @@ export function Nav() {
                             {navItems.map((item, index) => (
                                 <li
                                     key={index}
-                                    className={`profile-dropdown-item ${activeIndex === index ? 'profile-active' : ''}`}
+                                    className={`profile-dropdown-item ${activeIndex === index ? 'active' : ''}`}
                                     onClick={() => handleItemClick(index)}>
                                     <a href='#' className='profile-dropdown-item-link'>
                                         {item.icon}
