@@ -1,0 +1,143 @@
+.aside{
+    margin-top: 32px;
+    width: 296px;
+}
+
+.aside__wrapper{
+
+}
+
+.aside__logo{
+
+}
+
+.aside__name{
+    padding:  10px 0;
+}
+
+.aside__name-main{
+    color: #C9D1D9;
+    font-weight: 700;
+}
+
+.aside__name-sub{
+    color: #8B949E;
+    font-weight: 400;
+}
+
+.aside__bio{
+    padding: 15px 0;
+   
+}
+
+.aside__bio-text{
+    color: #C9D1D9;
+    font-size: 17px;
+}
+
+.aside__func{
+    padding: 10px 0;
+}
+
+.aside__btn-edit{
+    padding: 8px 16px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    width: 270px;
+    text-align: center;
+    border: 1px solid #f0f6fc15;
+    background-color: #21262D;
+    color: #C9D1D9;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+.aside__btn-edit:hover{
+    background-color: #2a2f36;
+}
+
+.aside__content-wrapper{
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+.aside__links{
+    color:  #8B949E;
+}
+
+.aside__links:hover{
+    color: #58A6FF;
+}
+
+.aside__links-follow{
+    color: #C9D1D9 ;
+}
+
+.aside__links:hover .aside__links-follow  {
+    color: #58A6FF;
+}
+
+.aside__links svg path{
+    fill: currentColor; 
+}
+
+.aside__info{
+    padding: 10px 0;
+}
+
+.country__name{
+    color: #C9D1D9;
+}
+.link__social{
+    color: #C9D1D9;
+}
+
+.aside__achievements{
+    padding: 10px 0;
+}
+
+.aside__title-name{
+    color: #C9D1D9;
+    margin-bottom: 15px;
+}
+
+.aside__achiev-logo{
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.aside__btn-beta{
+    background-color: #0D1117;
+    border-radius: 15px;
+    border: 1px solid #3FB950;
+    color: #3FB950;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.aside__btn-beta:hover{
+    background-color: #3d804689;
+}
+
+.aside__link-feedback{
+    color: #58A6FF;
+}
+
+.aside__link-feedback:hover{
+    color: #6a99cf8f;
+    text-decoration: underline;
+}
+
+.aside__organizations{
+    padding: 10px 0;
+}
+
+.organizations-emblem__list{
+    display: flex;
+}
+
+.organizations-emblem__item:not(:last-child){
+    margin-right: 5px;
+}

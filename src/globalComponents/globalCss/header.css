@@ -6,6 +6,187 @@
     justify-content: space-between;
     max-width: 100%;
 }
+/* 
+.modal-window-input {
+  position: absolute;
+
+  padding: 0 60px;
+  width: 100%;
+
+  z-index: 2;
+}
+.modal-window-input__bg {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  display: block;
+  width: 100%;
+  height: 100vh;
+
+  background-color: #8c959f33;
+}
+.modal-window-input__content {
+  padding: 10px;
+
+  background-color: #fff;
+  border: 1px solid #d0d7de;
+  border-radius: 16px;
+}
+.modal-window-input__content--hide {
+  display: none;
+}
+.modal-window-input__item {
+}
+.modal-window-input__item:last-child {
+  border-top: 1px solid #d0d7de;
+}
+.modal-window-input__wrapper-input {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 10px 10px;
+  
+  border: 2px solid #0969da;
+  border-radius: 8px;
+}
+.modal-window-input__search-span {
+  max-width: 16px;
+  max-height: 16px;
+  
+  fill: #8C959F;
+}
+.modal-window-input__input {
+  width: 100%;
+}
+.modal-window-input__action-list-link {
+  display: flex;
+  align-items: center;
+
+  margin: 10px 0;
+
+  padding: 10px;
+
+  border-radius: 5px;
+
+  transition: all .2s ease;
+}
+.modal-window-input__action-list-content {
+  position: relative;
+}
+.modal-window-input__action-list-content::after {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+
+  display: block;
+  width: 100%;
+  height: 1px;
+
+  background-color: #d0d7de;
+}
+.modal-window-input__action-list-link--hide {
+  display: none;
+}
+.modal-window-input__action-list-link:hover {
+  background-color: #d0d7de54;
+}
+.modal-window-input__search-span {
+}
+.modal-window-input__search-span--close {
+  position: relative;
+  z-index: 2;
+}
+.modal-window-input__search-span--close:hover {
+  cursor: pointer;
+}
+.modal-window-input__search-span--close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+
+  transition: all .2s ease;
+}
+.modal-window-input__search-span--close:hover::after {
+  background-color: #d0d7de54;
+  border-radius: 5px;
+}
+.modal-window-input__action-list-output {
+  margin-left: 10px;
+
+  font-size: 14px;
+  color: #57606A;
+}
+.modal-window-input__action-list-hint {
+  margin-left: auto;
+
+  color: #636c76;
+  font-size: 14px;
+}
+.sub-menu__modal-window {
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+.modal-window-list__title-li {
+  padding-bottom: 20px;
+  padding-left: 10px;
+
+  color: #636c76;
+  font-weight: 600;
+  font-size: 12px;
+}
+.modal-window-list__item {
+}
+.modal-window-list__item:not(:last-child) {
+  margin-bottom: 2px;
+}
+.modal-window-list__link {
+  display: flex;
+  align-items: center;
+
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+
+  border-radius: 5px;
+}
+.modal-window-list__link:hover {
+  background-color: #d0d7de54;
+}
+.modal-window-list__wrapper {
+}
+.modal-window-list__title {
+  color: #1f2328;
+  font-weight: 300;
+  font-size: 14px;
+}
+.modal-window-input__link {
+  display: inline-block;
+
+  padding-top: 15px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+
+  color: #0969da;;
+  font-size: 12px;
+}
+.modal-window-input__link:hover {
+  text-decoration: underline;
+}
+*/
 
 .header__wrapper{
     display: flex;
@@ -24,40 +205,6 @@
     justify-content: center;
     align-items: center;
 }
-
-.btn__slash{
-  position: absolute;
-  top: 25px;
-  left: 22.5rem;
-  color: #8d96a0;
-  background: #00000000;
-  border: 0.0625 solid #8d96a0;
-  border-radius: 0.1875rem;
-  cursor: pointer;
-}
-
-.btn__search{
-  display: none;
-  background: #00000000;
-  border: 0.025px solid #8d96a02f;
-  border-radius: 0.1875rem;
-  cursor: pointer;
-}
-
-
-.input-placeholder {
-    padding: 10px;
-    font-size: 16px;
-    border: 0px solid #ccc; /*Border of input will delete as not needed */
-    border-radius: 4px;
-    background-color: #010409; /* Background color of INPUT */
-    color: #ffffff; /*Change the color of INPUT text */
-    width: 20rem;
-  }
-
-  .input-placeholder::placeholder {
-    color: #C9D1D9; /* Example placeholder text color */
-  }
 
   .header__content{
     display: flex;
@@ -86,12 +233,52 @@
     background-color: #20242a;
   }
 
-  @media screen and (max-width: 1120px){
-    .input-placeholder{
-      display: none;
-    }
+  .btn-input {
+    display: flex;
+    align-items: center;
+    gap: 150px;
 
-    .btn__slash{
+    padding: 10px 10px;
+    
+    font-size: 14px;
+    color: #C9D1D9;
+    border: 0px solid #ccc;
+    border-radius: 6px;
+    background-color: #010409;
+
+    cursor: pointer;
+  }
+
+  .btn-wrapper {
+    display: flex;
+    align-items: center;
+
+  }
+
+  .btn-span {
+    max-width: 20px;
+    max-height: 20px;
+  }
+.btn-span--search {
+    margin-right: 5px;
+
+    max-width: 16px;
+    max-height: 16px;
+    
+    fill: #636c76;
+  }
+
+
+  .btn__search{
+    display: none;
+    background: #00000000;
+    border: 0.025px solid #8d96a02f;
+    border-radius: 0.1875rem;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 1120px){
+    .btn-input{
       display: none;
     }
 
@@ -109,15 +296,11 @@
       display: none;
     }
 
-    .input-placeholder{
-      display: block;
-    }
-
-    .btn__slash{
-      display: block;
+    .btn-input{
+      display: none;
     }
 
     .btn__search{
-      display: none;
+      display: block;
     }
   }

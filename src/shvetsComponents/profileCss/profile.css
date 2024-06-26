@@ -1,0 +1,12 @@
+.container {
+    background-color: #0D1117;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    max-width: 66.67%;
+    margin-right: auto;
+    margin-left: auto;
+}
