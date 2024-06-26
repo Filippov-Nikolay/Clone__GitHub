@@ -4,10 +4,11 @@ import {
     CodespacesSvg, GitHubCopilotSvg, CodeReviewSvg,
     IssuesSvg, DiscussionsSvg, ArrowDownSvg, LinkSvg,
     EnterprisePlatformSvg, PathSvg, SearchSvg, CloseSvg, 
-    OcticonCode, ArrowSymbolMktg
+    OcticonCode, ArrowSymbolMktg, OcticonBriefcase, OcticonLock
 } from '../svgComponents/svgComponents'
 import logoNLO from '../img/header_element_nlo.png'
 import React, { useState } from "react";
+import Tilt from 'react-vanilla-tilt'
 
 function OurPartners() {
     return (
@@ -37,18 +38,99 @@ function OurPartners() {
     )
 }
 
+function Card() {
+    let cards = document.querySelectorAll('.card-content__item');
+    console.log(cards);
+    cards.forEach (card => {
+        card.onmousemove = function (e) {
+            let x = e.pageX - card.offsetLeft;
+            let y = e.pageY - card.offsetTop;
+
+            card.style.setProperty('--x', x + 'px');
+            card.style.setProperty('--y', y + 'px');
+        }
+    });
+
+    return (
+        <div className="card-content">
+            <div className="card-content__item">
+                <div className="card-content__main">
+                    <h3 className="card-content__title">
+                        <span className="card-content__span">GitHub Actions </span>
+                        automates your build, test, and deployment workflow with simple and secure CI/CD.
+                    </h3>
+                    <a href="#" className="btn-link">Discover GitHub Actions<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                </div>
+                <div className="card-content__wrapper-img">
+                    <img src="https://github.githubassets.com/assets/illu-actions-2-c5178134f381.png" alt=""/>
+                </div>
+            </div>
+            <div className="card-content__wrapper-flex">
+                <div className="card-content__item card-content__item--column">
+                    <div className="card-content__main">
+                        <h3 className="card-content__title">
+                            <span className="card-content__span">GitHub Codespaces </span>
+                            offers a complete dev environment in seconds. Code, build, test, and open pull requests from any repo.
+                        </h3>
+                        <a href="#" className="btn-link">Check out GitHub Codespaces<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                    </div>
+                    <div className="card-content__wrapper-img">
+                    <img src="https://github.githubassets.com/assets/illu-codespaces-1d2d17e8b2b7.png" alt=""/>
+                    </div>
+                </div>
+                <div className="card-content__item card-content__item--column">
+                    <div className="card-content__main">
+                        <h3 className="card-content__title">
+                            <span className="card-content__span">GitHub Mobile and Copilot </span>
+                            now let you manage projects and converse with your AI pair programmer on the go.
+                        </h3>
+                        <a href="#" className="btn-link">Download GitHub Mobile<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                    </div>
+                    <div className="card-content__wrapper-img">
+                        <img src="https://github.githubassets.com/assets/illu-mobile-chat-9e7549906574.webp" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+function ApplicationSecurity() {
+    return (
+        <div className="application-security">
+            <div className='event'>
+                <div className="event__interval-middle event__interval-middle--transparent-to-blue"></div>
+                <div className="event__middle event__middle--blue">
+                        <OcticonLock></OcticonLock>
+                    </div>
+                <div className="event__interval-middle event__interval-middle--blue-to-transparent"></div>
+            </div>
+            <div className="river__wrapper">
+                <div className="fact">
+                    <div className="fact__content">
+                        <div className="fact__title-top fact__title-top--blue">Did you know?</div>
+                        <h3 className="fact__title fact__title--blue">Empower developers</h3>
+                        <p className="fact__sub-text">With GitHub, you can secure code in minutes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 function HeaderContent() {
     return (
+        <>
         <div className='header-content'>
             <div className='header-content__decor'><img src={logoNLO} alt=''/></div>
             <div className='header-content__main'>
                 <div className='event'>
                     <div className="event__start"></div>
-                    <div className="event__interval"></div>
-                    <div className="event__middle">
+                    <div className="event__interval event__interval--purple"></div>
+                    <div className="event__middle event__middle--purple">
                         <OcticonCode></OcticonCode>
                     </div>
-                    <div className="event__interval-middle event__interval-middle--low"></div>
+                    <div className="event__interval-middle event__interval-middle--purple-to-green"></div>
                 </div>
                 <div className='header-content__wrapper'>
                     <h1 className='header-content__title'>Let`s build from here</h1>
@@ -65,6 +147,62 @@ function HeaderContent() {
                 </div>
             </div>
         </div>
+        <div className="productivity">
+            <div className="productivity__content">
+                <div className='event'>
+                    <div className="event__middle event__middle--green">
+                        <OcticonBriefcase></OcticonBriefcase>
+                    </div>
+                    <div className="event__interval-middle event__interval-middle--green-to-transparent"></div>
+                </div>
+                <div className="productivity__event-info">
+                    <h2 className="content-title">Productivity</h2>
+                    <h3 className="content-sub-title">
+                        <span class="content-sub-title__accent">Accelerate innovation</span>
+                        Our AI-powered platform increases the pace of software development.
+                    </h3>
+                </div>
+            </div>
+            <div className="productivity__main">
+                <div className="productivity-block-anime">
+                    <div className="productivity-block-anime__first">
+                        <img src="https://github.githubassets.com/assets/illu-copilot-editor-6474457a5b19.png" alt=""/>
+                    </div>
+                    <img className='productivity-block-anime__blur' src="https://github.githubassets.com/assets/bg-glow-purple-6e9a6a96cb04.png" alt=""/>
+                    <div class="productivity-block-anime__second">
+                        <img src="https://github.githubassets.com/assets/illu-copilot-sidebar-3d2efb504577.png" alt=""/>
+                    </div>
+                </div>
+            </div>
+            <div className="river">
+                <div className='event'>
+                    <div className="event__interval-middle event__interval-middle--transparent-to-green"></div>
+                    <div className="event__interval-middle event__interval-middle--green-to-transparent"></div>
+                    <div className='event__interval-more-info'>
+                        <img src="https://github.githubassets.com/assets/git-branch-productivity-c304b83d09c7.svg" alt=""></img>
+                    </div>
+                </div>
+                <div className="river__wrapper">
+                    <div className="river__content">
+                        <h2 className="river__title">
+                            <span className='river__span-title'>GitHub Copilot</span> empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.
+                        </h2>
+                        <a href="#" className="btn-link">Explore GitHub Copilot <span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                    </div>
+                    <div className="fact">
+                        <div className="fact__content">
+                            <div className="fact__title-top fact__title-top--green">Did you know?</div>
+                            <h3 className="fact__title fact__title--green">22% increase</h3>
+                            <p className="fact__sub-text">in developer productivity after three years with GitHub</p>
+                            <a href="#" className="btn-link">Read the report<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <Card></Card>
+            <ApplicationSecurity></ApplicationSecurity>
+        </div>
+        </>
     )
 }
 
