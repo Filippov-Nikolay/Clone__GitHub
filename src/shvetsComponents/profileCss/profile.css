@@ -6,7 +6,22 @@
 }
 
 .content{
-    max-width: 66.67%;
+    max-width: 1280px;
     margin-right: auto;
     margin-left: auto;
+}
+
+
+@media screen and (max-width: 1184px) {
+    .content{
+        margin-right: 32px;
+        margin-left: 32px;
+    }
+}
+
+@media screen and (max-width: 868px) {
+    .content{
+        margin-right: 24px;
+        margin-left: 24px;
+    }
 }

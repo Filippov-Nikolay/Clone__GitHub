@@ -3,11 +3,15 @@
     width: 296px;
 }
 
-.aside__wrapper{
+.aside__logo{
 
 }
 
-.aside__logo{
+.aside__editor{
+
+}
+
+.aside__main{
 
 }
 
@@ -140,4 +144,56 @@
 
 .organizations-emblem__item:not(:last-child){
     margin-right: 5px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .aside{
+        margin-top: 32px;
+        width: 226px;
+    }
+
+    .aside__btn-edit{
+
+        font-size: 14px;
+        width: 220px;
+
+    }
+
+    .aside__name-main{
+        font-size: 20px;
+    }
+    
+    .aside__name-sub{
+        font-size: 15px;
+    }
+
+    .aside__bio-text{
+        font-size: 13px;
+    }
+
+    .aside__links{
+        font-size: 14px;
+    }
+
+    .country__name{
+        font-size: 14px;
+    }
+
+    .link__social{
+        font-size: 14px;
+    }
+
+    .aside__title-name{
+        font-size: 14px;
+    }
+
+    .aside__achiev-logo{
+        width: 52px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+   
 }

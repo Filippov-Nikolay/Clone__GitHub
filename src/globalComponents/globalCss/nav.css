@@ -39,6 +39,7 @@
 
 .dropdown-toggle {
     position: relative;
+    display: none;
 }
 
 .dropdown-content {
