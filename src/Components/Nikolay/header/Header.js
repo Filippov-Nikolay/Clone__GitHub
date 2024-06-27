@@ -169,6 +169,94 @@ function CardFaster() {
         </div>
     )
 }
+function CardCollaboration() {
+    const cardRefs = {
+        cardRef1: useRef(null),
+        cardRef2: useRef(null),
+        cardRef3: useRef(null),
+        cardRef4: useRef(null)
+    };
+    
+    const handleMouseMove = debounce((e, refName) => {
+    const card = cardRefs[refName].current;
+    if (card) {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--x', x + 'px');
+        card.style.setProperty('--y', y + 'px');
+    }
+    }, 1);
+
+    return (
+        <>
+            <div className="card-content card-collaboration">
+                <div className="card-content__item card-content__item--pink" onMouseMove={(e) => handleMouseMove(e, 'cardRef1')} ref={cardRefs.cardRef1}>
+                    <div className="card-content__main">
+                        <h3 className="card-content__title">
+                            <span className="card-content__span">GitHub Sponsors </span>
+                            lets you support your favorite open source maintainers and projects.
+                        </h3>
+                        <a href="#" className="btn-link">Invest with GitHub Sponsors<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                    </div>
+                    <div className="card-content__wrapper-img">
+                        <img src="https://github.githubassets.com/assets/illu-code-scanning-fc9dfb212aa3.png" alt=""/>
+                    </div>
+                </div>
+                <div className="card-content__wrapper-flex">
+                    <div className="card-content__item card-content__item--pink card-content__item--column" onMouseMove={(e) => handleMouseMove(e, 'cardRef2')} ref={cardRefs.cardRef2}> 
+                        <div className="card-content__main">
+                            <h3 className="card-content__title">
+                                <span className="card-content__span">GitHub Discussions </span>
+                                creates space to ask questions and have open-ended conversations.
+                            </h3>
+                            <a href="#" className="btn-link">Jump into GitHub Discussions<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                        </div>
+                        <div className="card-content__wrapper-img">
+                        <img src="https://github.githubassets.com/assets/illu-discussions-2-b915a6dd867e.png" alt=""/>
+                        </div>
+                    </div>
+                    <div className="card-content__item card-content__item--pink card-content__item--column" onMouseMove={(e) => handleMouseMove(e, 'cardRef3')} ref={cardRefs.cardRef3}>
+                        <div className="card-content__main">
+                            <h3 className="card-content__title">
+                                <span className="card-content__span">Pull requests </span>
+                                allow real-time communication and collaboration about code changes.
+                            </h3>
+                            <a href="#" className="btn-link">Check out pull requests<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                        </div>
+                        <div className="card-content__wrapper-img">
+                            <img src="https://github.githubassets.com/assets/illu-pull-requests-2-280cc958fc05.png" alt=""/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="application-security">
+            <div className='event'>
+                <div className="event__interval-middle event__interval-middle--transparent-to-purple"></div>
+                <div className="event__middle event__middle--purple">
+                    <OcticonCode></OcticonCode>
+                </div>
+            </div>
+            <div className="application-security__content application-security__content-card-collaboration">
+                <h3 className="content-sub-title content-sub-title--big">
+                    Over 100 million developers call GitHub home3
+                </h3>
+                <p className="content-sub-text content-sub-title--gray">
+                    Whether you`re scaling your startup or just learning how to code, GitHub is your home. Join the world`s largest developer platform to build the innovations that empower humanity. Let`s build from here.
+                </p>
+                <div className="header-form">
+                    <form className='header-form__form' action="POST">
+                        <input className='header-form__input' type="text" placeholder='Email address'/>
+                        <button className='header-form__btn'>Sign up for GitHub</button>
+                    </form>
+                    <div className="header-form__decor"></div>
+                    <button className='header-form__btn-start'>Start a free enterprise trial <span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></button>
+                </div>
+            </div>
+        </div>
+        </>
+    )
+}
 function ApplicationSecurity() {
     const cardRefs = {
         cardRef1: useRef(null)
@@ -324,7 +412,6 @@ function Collaboration() {
     </>
     )
 }
-
 function River() {
     return (
         <div className="river">
@@ -416,6 +503,12 @@ function HeaderContent() {
             <ApplicationSecurity></ApplicationSecurity>
             <CardFaster></CardFaster>
             <Collaboration></Collaboration>
+            <CardCollaboration></CardCollaboration>
+            {/* <div className="global">
+                <video width="320" height="240" controls>
+                    <source src="https://github.githubassets.com/assets/aurora.h264-25af1afc4e69.mp4" type="video/mp4"/>
+                </video>
+            </div> */}
         </div>
         </>
     )

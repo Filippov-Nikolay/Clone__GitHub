@@ -707,6 +707,9 @@
 
 
 .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
     position: relative;
 }
 .card-content__item {
@@ -746,6 +749,9 @@
 .card-content__item--blue::after {
     background: radial-gradient(rgba(51, 179, 174, 0.601), transparent, transparent);
 }
+.card-content__item--pink::after {
+    background: radial-gradient(rgba(247, 120, 186, 0.601), transparent, transparent);
+}
 .card-content__main {
     display: flex;
     flex-direction: column;
@@ -773,11 +779,29 @@
 .card-content__wrapper-flex {
     display: flex;
     gap: 32px;
-
-    margin-top: 32px;
 }
 .card-content__item--column {
     width: 50%;
     flex-direction: column;
     justify-content: space-between;
+}
+.card-collaboration {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.content-sub-title--big {
+    margin-bottom: 32px;
+
+    font-size: 64px;
+    line-height: 68px;
+}
+.content-sub-title--gray {
+    margin-bottom: 64px;
+
+    font-size: 20px;
+    line-height: 28px;
+
+    color: #8d96a0;
+
+    max-width: 840px;
 }

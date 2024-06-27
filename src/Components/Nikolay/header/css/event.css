@@ -57,6 +57,12 @@
 .event__interval-middle--pink-to-transparent {
     background: linear-gradient(#F778BA 70%, transparent);
 }
+.event__interval-middle--transparent-to-purple {
+    background: linear-gradient(transparent, #7C72FF 30%);
+}
+.event__interval-middle--purple-to-transparent {
+    background: linear-gradient(#7C72FF 70%, transparent);
+}
 .event__middle {
     position: relative;
 
