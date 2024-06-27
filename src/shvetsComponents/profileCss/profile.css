@@ -1,0 +1,39 @@
+.profile {
+    background-color: #0D1117;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-container{
+    max-width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.profile-content {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: auto;
+}
+
+
+@media screen and (max-width: 1184px) {
+    .profile-container{
+        margin-right: 32px;
+        margin-left: 32px;
+    }
+}
+
+@media screen and (max-width: 868px) {
+    .profile-container{
+        margin-right: 24px;
+        margin-left: 24px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .profile-content {
+        grid-template-columns: auto;
+    }
+}

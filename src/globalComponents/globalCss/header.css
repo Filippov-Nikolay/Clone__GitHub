@@ -1,0 +1,131 @@
+.profile-header{
+    background-color: #161B22;
+    padding: 1rem;
+    gap: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    z-index: 2;
+  position: relative;
+}
+
+.profile-header__wrapper{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.profile-header__logo{
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    margin-left: 0.5rem;
+}
+
+.profile-header__search-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  .profile-header__content{
+    display: flex;
+    align-items: center;
+
+  }
+  .profile-content__wrapper{
+    display: flex;
+    gap: 25px;
+  }
+
+  .profile-content__item-link{
+    color: #F0F6FC;
+  }
+
+  .profile-content__item{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    transition: 0.5s all;
+    border-radius: 10px;
+  }
+
+  .profile-content__item:hover{
+    background-color: #20242a;
+  }
+
+  .profile-btn-input {
+    display: flex;
+    align-items: center;
+    gap: 150px;
+
+    padding: 10px 10px;
+    
+    font-size: 14px;
+    color: #C9D1D9;
+    border: 0px solid #ccc;
+    border-radius: 6px;
+    background-color: #010409;
+
+    cursor: pointer;
+  }
+
+  .profile-btn-wrapper {
+    display: flex;
+    align-items: center;
+
+  }
+
+  .profile-btn-span {
+    max-width: 20px;
+    max-height: 20px;
+  }
+.profile-btn-span--search {
+    margin-right: 5px;
+
+    max-width: 16px;
+    max-height: 16px;
+    
+    fill: #636c76;
+  }
+
+
+  .profile-btn__search{
+    display: none;
+    background: #00000000;
+    border: 0.025px solid #8d96a02f;
+    border-radius: 0.1875rem;
+    cursor: pointer;
+  }
+
+  .profile-content__logo{
+    width: 21px;
+  }
+
+  @media screen and (max-width: 1120px){
+    .profile-btn-input{
+      display: none;
+    }
+
+    .profile-btn__search{
+      display: block;
+    }
+
+    .profile-content__item-link{
+      font-size: 12px;
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    .profile-header__content{
+      display: none;
+    }
+
+    .profile-btn-input{
+      display: none;
+    }
+
+    .profile-btn__search{
+      display: block;
+    }
+  }
