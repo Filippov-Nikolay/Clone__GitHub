@@ -1,0 +1,45 @@
+[
+    {
+        "login": "",
+        "password": "",
+        "email": "",
+        "imgProfile": "",
+        "name": "",
+        "bio": "",
+        "company": "",
+        "location": "",
+        "website": "",
+        "linksToSocialProfile": [
+
+        ],
+        "repositories": [
+            {
+                "nameRepos": "",
+                "dominantLanguage": "",
+                "isPinned": true,
+                "dateLastUpdate": "05.05.2024",
+                "isPrivate": false,
+                "Languages": [],
+                "path:": ""
+            }
+        ],
+        "followers": [
+
+        ],
+        "following": [
+
+        ],
+        "activity": [
+            [], 
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+
+    }
+]

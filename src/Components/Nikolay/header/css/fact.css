@@ -1,0 +1,42 @@
+.fact {
+    margin-bottom: 40px;
+}
+.fact__content {
+}
+.fact__title-top {
+    padding: 5px;
+
+    width: fit-content;
+
+    font-size: 12px;
+    
+    border-radius: 2em;
+}
+.fact__title-top--green {
+    color: #3fb950;
+    border: 1px solid #3fb950;
+}
+.fact__title-top--blue {
+    color: #33b3ae;
+    border: 1px solid #33b3ae;
+}
+.fact__title {
+    margin: 16px 0;
+
+    font-size: 72px;
+    line-height: 76px;
+    font-weight: 500;
+}
+.fact__title--green {
+    color: #3fb950;
+}
+.fact__title--blue {
+    color: #33b3ae;
+}
+.fact__sub-text {
+    margin-bottom: 16px;
+
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+}
