@@ -129,7 +129,7 @@ const RepoSearchInit = () => {
     ];
 
     return (
-        <div className="app">
+        <div className="search-app">
             <RepositorySearch repositories={repositories} />
             {/* Other components */}
         </div>

@@ -1,4 +1,11 @@
 
+*{
+    box-sizing: border-box;
+}
+.vb-app
+{
+    background-color: #0D1117;
+}
 .vb-app-contain {
     display: flex;
     font-weight: 13;
@@ -26,6 +33,8 @@
     position: absolute;
     width: 100%;
     height: auto;
+    
+
   }
 .left-panel, .center-panel, .right-panel {
     padding: 10px;

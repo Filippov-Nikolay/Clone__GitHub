@@ -170,10 +170,7 @@ margin-right: 3px;
         font-size: 13px;
     }
 
-    .vb-repo-button-left,
-    .vb-repo-button-right {
-        padding: 4px 8px;
-    }
+  
 }
 
 @media screen and (max-width: 768px) {

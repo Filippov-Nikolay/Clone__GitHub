@@ -1,6 +1,9 @@
 .latest-changes {
     padding: 20px;
-    color: #fff;
+    background-color: #010409;
+    border-radius: 8px;
+    color: #ffffff;
+    width: 300px;
 }
 
 .latest-changes__title {
@@ -16,27 +19,41 @@
 .latest-changes__item {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    position: relative;
+    margin-bottom: 10px;
 }
 
 .latest-changes__marker {
-    position: absolute;
-    left: -20px;
-    top: 0;
     width: 10px;
     height: 10px;
-    background-color: #58a6ff;
+    background-color: #1c1c1c;
+    border: 2px solid #21262D;
     border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+}
+
+.latest-changes__item::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    bottom: 0;
+    width: 2px;
+    background-color: #21262D;
+}
+
+.latest-changes__item:last-child::before {
+    height: 10px;
 }
 
 .latest-changes__content {
-    margin-left: 20px;
+    flex: 1;
 }
 
 .latest-changes__link {
-    color: #58a6ff;
+    color: #007bff;
     text-decoration: none;
+    font-size: 14px;
 }
 
 .latest-changes__link:hover {

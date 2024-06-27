@@ -13,7 +13,6 @@ const LatestChanges = () => {
     return (
         <div className="latest_changes">
             <LatestChangesCard changes={changes} />
-            {/* Other components */}
         </div>
     );
 };

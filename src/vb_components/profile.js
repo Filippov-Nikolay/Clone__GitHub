@@ -11,12 +11,12 @@ import RepoSearchInit from './repo_search_init/repo_search_init.js'
 export function VbProfile() {
 
     return(
-        <div className='profile'>
+        <div className='vbb-profile'>
             <Header/>
             <Nav/>
-            <main className='main'>
-                <div className='profile-container'>
-                    <div className='profile-content'>
+            <main className='vbb-main'>
+                <div className='vbb-profile-container'>
+                    <div className='vbb-profile-content'>
                         <Aside/>
                         <RepoSearchInit/>
                     </div>
