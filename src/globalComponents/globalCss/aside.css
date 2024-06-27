@@ -195,6 +195,10 @@
 
 @media screen and (max-width: 767px) {
 
+    .profile-aside{
+        margin-left: 25px;
+    }
+
    .profile-aside__logo{
     width: 62px;
    }

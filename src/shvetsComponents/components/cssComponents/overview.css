@@ -78,6 +78,11 @@
     display: flex; 
     gap: 10px;
     color: #58A6FF;
+    cursor: pointer;
+  }
+  .pinned-item-title:hover{
+    text-decoration: underline;
+    color: #58a6ff9b;
   }
   
   .pinned-item-type {
@@ -86,6 +91,11 @@
     padding: 2px 6px;
     border-radius: 10px;
     font-size: 0.75rem;
+    cursor: pointer;
+  }
+  
+  .pinned-item-type:hover{
+    background-color: #8b949e1e;
   }
 
   .pinned-item-footer{
@@ -107,6 +117,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .pinned-item-icon:hover svg path{
+    fill: #9a8830;
   }
   
 
