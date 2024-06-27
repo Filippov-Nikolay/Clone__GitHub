@@ -9,10 +9,10 @@ const AppRouter = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/vb-profile" element={<VbProfile/>}/>
-        <Route path="/vb-app" element={<VbApp/>}/>
+        <Route path="/Clone__GitHub/" element={<Index />} />
+        <Route path="Clone__GitHub/profile" element={<Profile />} />
+        <Route path="Clone__GitHub/vb-profile" element={<VbProfile/>}/>
+        <Route path="Clone__GitHub/vb-app" element={<VbApp/>}/>
       </Routes>
     </Router>
   );

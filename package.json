@@ -1,6 +1,7 @@
 {
   "name": "projectreact",
   "version": "0.1.0",
+  "homepage": "https://filippov-nikolay.github.io/Clone__GitHub/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -9,10 +10,14 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.2.1",
+    "react-router-dom": "^6.24.0",
     "react-scripts": "5.0.1",
+    "react-vanilla-tilt": "^1.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -35,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
