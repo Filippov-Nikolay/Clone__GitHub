@@ -41,16 +41,19 @@ function EmblemOrganizations() {
 export function Aside() {
     return (
         <aside className='profile-aside'>
-                <div className='profile-aside__logo'>   
-                    <img src={LogoProfile} alt='Logo Profile'/>
-                </div>
+                
                 <div className='profile-aside__editor'>
                     {/* soon */}
                 </div>
                 <div className='profile-aside__main'>
-                    <div className='profile-aside__name'>
-                        <h2 className='profile-aside__name-main'>chirag singla</h2>
-                        <h3 className='profile-aside__name-sub'>chiragsingla17</h3>
+                    <div className='profile-aside__wrapper'>
+                        <div className='profile-aside__logo'>   
+                            <img src={LogoProfile} alt='Logo Profile'/>
+                        </div>
+                        <div className='profile-aside__name'>
+                            <h2 className='profile-aside__name-main'>chirag singla</h2>
+                            <h3 className='profile-aside__name-sub'>chiragsingla17</h3>
+                        </div>
                     </div>
                     <div className='profile-aside__bio'>
                         <span className='profile-aside__bio-text'>Currently working in KAN LABs, NYC USA as an ML Engineer(Remote)</span>

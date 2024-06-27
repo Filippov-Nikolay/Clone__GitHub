@@ -12,9 +12,7 @@
 }
 
 .profile-content {
-    display: grid;
-    grid-gap: 24px;
-    grid-template-columns: auto;
+    display: flex;
 }
 
 
@@ -34,6 +32,8 @@
 
 @media screen and (max-width: 767px) {
     .profile-content {
-        grid-template-columns: auto;
+        flex-direction: column;
+        align-items: center;
     }
+
 }
