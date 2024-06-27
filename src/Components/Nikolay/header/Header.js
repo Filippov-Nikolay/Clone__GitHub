@@ -5,7 +5,8 @@ import {
     IssuesSvg, DiscussionsSvg, ArrowDownSvg, LinkSvg,
     EnterprisePlatformSvg, PathSvg, SearchSvg, CloseSvg, 
     OcticonCode, ArrowSymbolMktg, OcticonBriefcase, OcticonLock,
-    OcticonCodeConduct
+    OcticonCodeConduct, LogoGithub, LogoTwitter, LogoFacebook, 
+    LogoLinkedIn, LogoYouTube, LogoTwitch, LogoTikTok, LogoGitHub
 } from '../svgComponents/svgComponents'
 import logoNLO from '../img/header_element_nlo.png'
 import React, { useState, useRef } from "react";
@@ -60,18 +61,21 @@ function Card() {
 
     return (
         <div className="card-content">
-            <div className="card-content__item card-content__item--green" onMouseMove={(e) => handleMouseMove(e, 'cardRef1')} ref={cardRefs.cardRef1}>
-                <div className="card-content__main">
-                    <h3 className="card-content__title">
-                        <span className="card-content__span">GitHub Actions </span>
-                        automates your build, test, and deployment workflow with simple and secure CI/CD.
-                    </h3>
-                    <a href="#" className="btn-link">Discover GitHub Actions<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+            <Tilt className='tilt-item' options={{ perspective: 5000, }} style={{ }}>
+                <div className="card-content__item card-content__item--green" onMouseMove={(e) => handleMouseMove(e, 'cardRef1')} ref={cardRefs.cardRef1}>
+                    <div className="card-content__main">
+                        <h3 className="card-content__title">
+                            <span className="card-content__span">GitHub Actions </span>
+                            automates your build, test, and deployment workflow with simple and secure CI/CD.
+                        </h3>
+                        <a href="#" className="btn-link">Discover GitHub Actions<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                    </div>
+                    <div className="card-content__wrapper-img">
+                        <img src="https://github.githubassets.com/assets/illu-actions-2-c5178134f381.png" alt=""/>
+                    </div>
                 </div>
-                <div className="card-content__wrapper-img">
-                    <img src="https://github.githubassets.com/assets/illu-actions-2-c5178134f381.png" alt=""/>
-                </div>
-            </div>
+            </Tilt>
+            
             <div className="card-content__wrapper-flex">
                 <div className="card-content__item card-content__item--green card-content__item--column" onMouseMove={(e) => handleMouseMove(e, 'cardRef2')} ref={cardRefs.cardRef2}> 
                     <div className="card-content__main">
@@ -239,7 +243,7 @@ function CardCollaboration() {
             </div>
             <div className="application-security__content application-security__content-card-collaboration">
                 <h3 className="content-sub-title content-sub-title--big">
-                    Over 100 million developers call GitHub home3
+                    Over 100 million developers call GitHub home<sup>3</sup>
                 </h3>
                 <p className="content-sub-text content-sub-title--gray">
                     Whether you`re scaling your startup or just learning how to code, GitHub is your home. Join the world`s largest developer platform to build the innovations that empower humanity. Let`s build from here.
@@ -441,77 +445,324 @@ function River() {
         </div>
     )
 }
-
+function Footer() {
+    return (
+        <footer className='footer'>
+            <div className="container">
+                <div className="footer__content">
+                    <div className="footer__item">
+                        <div className="footer__wrapper">
+                            <a className="footer__logo" href="#"><LogoGithub></LogoGithub></a>
+                            <h3 className='footer__title'>Subscribe to our developer newsletter</h3>
+                            <p className='footer__sub-text'>Get tips, technical guides, and best practices. Twice a month. Right in your inbox.</p>
+                            <a className='footer__btn' href="#">Subscribe</a>
+                        </div>
+                    </div>
+                    <div className="footer__item-wrapper">
+                        <div className="footer__item">
+                            <ul className="footer-menu__list">
+                                <li className="footer-menu__item footer-menu__item--title">
+                                    Product
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Features</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Enterprise</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Copilot</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Security</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Pricing</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Team</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Resources</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Roadmap</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Compare GitHub</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="footer__item">
+                            <ul className="footer-menu__list">
+                                <li className="footer-menu__item footer-menu__item--title">
+                                    Platform
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Developer API</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Partners</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Education</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Electron</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">GitHub CLI</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">GitHub Desktop</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">GitHub Mobile</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="footer__item">
+                            <ul className="footer-menu__list">
+                                <li className="footer-menu__item footer-menu__item--title">
+                                    Support
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Docs</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Community Forum</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Professional Services</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Premium Support</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Skills</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Status</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Contact GitHub</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="footer__item">
+                            <ul className="footer-menu__list">
+                                <li className="footer-menu__item footer-menu__item--title">
+                                    Company
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">About</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Customer stories</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Blog</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">The ReadME Project</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Careers</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Press</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Inclusion</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Social Impact</a>
+                                </li>
+                                <li className="footer-menu__item">
+                                    <a href="#" className="footer-menu__link">Shop</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="footer-sub-content">
+                <div className="container">
+                    <div className="footer-sub-content__wrapper">
+                        <div className="footer-sub-content__item">
+                            <ul className="footer-sub-content-menu__list">
+                                <li className="footer-sub-content-menu__item">© 2024 GitHub, Inc.</li>
+                                <li className="footer-sub-content-menu__item">
+                                    <a className="footer-sub-content-menu__link" href="#">Terms</a>
+                                </li>
+                                <li className="footer-sub-content-menu__item">
+                                    <a className="footer-sub-content-menu__link" href="#">Privacy</a>
+                                    (<a className="footer-sub-content-menu__link" href="#">Updated 08/2022</a>)
+                                </li>
+                                <li className="footer-sub-content-menu__item">
+                                    <a className="footer-sub-content-menu__link" href="#">Sitemap</a>
+                                </li>
+                                <li className="footer-sub-content-menu__item">
+                                    <a className="footer-sub-content-menu__link" href="#">What is Git?</a>
+                                </li>
+                                <li className="footer-sub-content-menu__item">
+                                    <a className="footer-sub-content-menu__link" href="#">Manage cookies</a>
+                                </li>
+                                <li className="footer-sub-content-menu__item">
+                                    <a className="footer-sub-content-menu__link" href="#">Do not share my personal information</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="footer-sub-content__item">
+                            <ul className="footer-sub-content-menu__list">
+                                <li className="footer-sub-content-menu__item">
+                                    <a className="footer-sub-content-menu__link" href="#"><LogoTwitter></LogoTwitter></a>
+                                </li>
+                                <li className="footer-sub-content-menu__item">
+                                    <a className="footer-sub-content-menu__link" href="#"><LogoFacebook></LogoFacebook></a>
+                                </li>
+                                <li className="footer-sub-content-menu__item">
+                                    <a className="footer-sub-content-menu__link" href="#"><LogoLinkedIn></LogoLinkedIn></a>
+                                </li>
+                                <li className="footer-sub-content-menu__item">
+                                    <a className="footer-sub-content-menu__link" href="#"><LogoYouTube></LogoYouTube></a>
+                                </li>
+                                <li className="footer-sub-content-menu__item">
+                                    <a className="footer-sub-content-menu__link" href="#"><LogoTwitch></LogoTwitch></a>
+                                </li>
+                                <li className="footer-sub-content-menu__item">
+                                    <a className="footer-sub-content-menu__link" href="#"><LogoTikTok></LogoTikTok></a>
+                                </li>
+                                <li className="footer-sub-content-menu__item">
+                                    <a className="footer-sub-content-menu__link" href="#"><LogoGitHub></LogoGitHub></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    )
+}
+function SectionContent() {
+    return (
+        <div className="productivity">
+            <div className="container">
+                <div className="productivity__content">
+                    <div className='event'>
+                        <div className="event__middle event__middle--green">
+                            <OcticonBriefcase></OcticonBriefcase>
+                        </div>
+                        <div className="event__interval-middle event__interval-middle--green-to-transparent"></div>
+                    </div>
+                    <div className="productivity__event-info">
+                        <h2 className="content-title">Productivity</h2>
+                        <h3 className="content-sub-title">
+                            <span class="content-sub-title__accent content-sub-title__accent--green">Accelerate innovation</span>
+                            Our AI-powered platform increases the pace of software development.
+                        </h3>
+                    </div>
+                </div>
+                <div className="productivity__main">
+                    <div className="productivity-block-anime">
+                        <div className="productivity-block-anime__first">
+                            <img src="https://github.githubassets.com/assets/illu-copilot-editor-6474457a5b19.png" alt=""/>
+                        </div>
+                        <img className='productivity-block-anime__blur' src="https://github.githubassets.com/assets/bg-glow-purple-6e9a6a96cb04.png" alt=""/>
+                        <div class="productivity-block-anime__second">
+                            <img src="https://github.githubassets.com/assets/illu-copilot-sidebar-3d2efb504577.png" alt=""/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="container">
+                <River></River>
+                <Card></Card>
+                <ApplicationSecurity></ApplicationSecurity>
+                <CardFaster></CardFaster>
+            </div>
+            <div className="wrapper-gradient">
+                <div className="container">
+                    <Collaboration></Collaboration>
+                    <CardCollaboration></CardCollaboration>
+                </div>
+                <div className="global">
+                    <div className="global__wrapper">
+                        <video className='global__video' autoPlay loop muted>
+                            <source type="video/mp4; codecs=hevc,mp4a.40.2" src="https://github.githubassets.com/assets/globe-900.hevc-58019d77b21c.mp4"/>
+                            <source type="video/mp4; codecs=avc1.4D401E,mp4a.40.2" src="https://github.githubassets.com/assets/globe-900.h264-975e7b5ac572.mp4"/>
+                        </video>
+                        {/* <button className='global__btn'>Pause</button> */}
+                    </div>
+                    <div className="global__gradient"></div>
+                    <div className="container">
+                        <ul className="global__list">
+                            <li className="global__item">
+                                <sup>1</sup>This 7X times factor is based on data from the industry`s longest running analysis of fix rates Veracode State of Software Security 2023, which cites the average time to fix 50% of flaws as 198 days vs. GitHub`s fix rates of 72% of flaws with in 28 days which is at a minimum of 7X faster when compared.
+                            </li>
+                            <li className="global__item">
+                                <sup>2</sup>The Total Economic Impact™ Of GitHub Enterprise Cloud and Advanced Security, a commissioned study conducted by Forrester Consulting, 2022. Results are for a composite organization based on interviewed customers.
+                            </li>
+                            <li className="global__item">
+                                <sup>3</sup>There are now 100 million developers around the world using GitHub. <a className='global__link' href="#">Read the blog post.</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
 function HeaderContent() {
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelector('.global__video').play();
+    });
+
     return (
         <>
-        <div className='header-content'>
-            <div className='header-content__decor'><img src={logoNLO} alt=''/></div>
-            <div className='header-content__main'>
-                <div className='event'>
-                    <div className="event__start"></div>
-                    <div className="event__interval event__interval--purple"></div>
-                    <div className="event__middle event__middle--purple">
-                        <OcticonCode></OcticonCode>
-                    </div>
-                    <div className="event__interval-middle event__interval-middle--purple-to-green"></div>
-                </div>
-                <div className='header-content__wrapper'>
-                    <h1 className='header-content__title'>Let`s build from here</h1>
-                    <p className='header-content__sub-title'>Harnessed for productivity. Designed for collaboration. Celebrated for built-in security. Welcome to the platform developers love.</p>
-                    <div className="header-form">
-                        <form className='header-form__form' action="POST">
-                            <input className='header-form__input' type="text" placeholder='Email address'/>
-                            <button className='header-form__btn'>Sign up for GitHub</button>
-                        </form>
-                        <div className="header-form__decor"></div>
-                        <button className='header-form__btn-start'>Start a free enterprise trial <span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></button>
-                    </div>
-                    <OurPartners></OurPartners>
-                </div>
-            </div>
-        </div>
-        <div className="productivity">
-            <div className="productivity__content">
-                <div className='event'>
-                    <div className="event__middle event__middle--green">
-                        <OcticonBriefcase></OcticonBriefcase>
-                    </div>
-                    <div className="event__interval-middle event__interval-middle--green-to-transparent"></div>
-                </div>
-                <div className="productivity__event-info">
-                    <h2 className="content-title">Productivity</h2>
-                    <h3 className="content-sub-title">
-                        <span class="content-sub-title__accent content-sub-title__accent--green">Accelerate innovation</span>
-                        Our AI-powered platform increases the pace of software development.
-                    </h3>
-                </div>
-            </div>
-            <div className="productivity__main">
-                <div className="productivity-block-anime">
-                    <div className="productivity-block-anime__first">
-                        <img src="https://github.githubassets.com/assets/illu-copilot-editor-6474457a5b19.png" alt=""/>
-                    </div>
-                    <img className='productivity-block-anime__blur' src="https://github.githubassets.com/assets/bg-glow-purple-6e9a6a96cb04.png" alt=""/>
-                    <div class="productivity-block-anime__second">
-                        <img src="https://github.githubassets.com/assets/illu-copilot-sidebar-3d2efb504577.png" alt=""/>
+            <div className="container">
+                <div className='header-content'>
+                    <div className='header-content__decor'><img src={logoNLO} alt=''/></div>
+                    <div className='header-content__main'>
+                        <div className='event'>
+                            <div className="event__start"></div>
+                            <div className="event__interval event__interval--purple"></div>
+                            <div className="event__middle event__middle--purple">
+                                <OcticonCode></OcticonCode>
+                            </div>
+                            <div className="event__interval-middle event__interval-middle--purple-to-green"></div>
+                        </div>
+                        <div className='header-content__wrapper'>
+                            <h1 className='header-content__title'>Let`s build from here</h1>
+                            <p className='header-content__sub-title'>Harnessed for productivity. Designed for collaboration. Celebrated for built-in security. Welcome to the platform developers love.</p>
+                            <div className="header-form">
+                                <form className='header-form__form' action="POST">
+                                    <input className='header-form__input' type="text" placeholder='Email address'/>
+                                    <button className='header-form__btn'>Sign up for GitHub</button>
+                                </form>
+                                <div className="header-form__decor"></div>
+                                <button className='header-form__btn-start'>Start a free enterprise trial <span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></button>
+                            </div>
+                            <OurPartners></OurPartners>
+                        </div>
                     </div>
                 </div>
             </div>
-            <River></River>
-            <Card></Card>
-            <ApplicationSecurity></ApplicationSecurity>
-            <CardFaster></CardFaster>
-            <Collaboration></Collaboration>
-            <CardCollaboration></CardCollaboration>
-            <div className="global">
-                <video width="916" height="918" loop="" muted="" playsinline="" preload="none" hidden="">
-                    <source type="video/mp4; codecs=hevc,mp4a.40.2" src="https://github.githubassets.com/assets/globe-900.hevc-58019d77b21c.mp4"/>
-                    <source type="video/mp4; codecs=avc1.4D401E,mp4a.40.2" src="https://github.githubassets.com/assets/globe-900.h264-975e7b5ac572.mp4"/>
-                </video>
-            </div>
-        </div>
         </>
+    )
+}
+function SignUp() {
+    return (
+        <a className="nav__btn nav__btn--border" href="#">Sign up</a>
+    )
+}
+function BurgerMenu() {
+    return (
+        <div className="burger">
+            <span className="burger__span"></span>
+            <span className="burger__span"></span>
+            <span className="burger__span"></span>
+        </div>
     )
 }
 
@@ -533,343 +784,354 @@ export function Header() {
     }
 
     return (
-        <header className="header">
-            <div className="modal-window-input">
-                <div className={isHideModalWindow ? "modal-window-input__content" : "modal-window-input__content modal-window-input__content--hide"}>
-                    <div className="modal-window-input__bg" onClick={HideModalWindow}></div>
-                    <div className="modal-window-input__item">
-                        <div className="modal-window-input__wrapper-input">
-                            <span className="modal-window-input__search-span"><SearchSvg></SearchSvg></span>
-                            <input className="modal-window-input__input" type="text" onChange={HandleSearchChange}/>
-                            <span className="modal-window-input__search-span modal-window-input__search-span--close"><CloseSvg></CloseSvg></span>
-                        </div>
-                        <div className="modal-window-input__action-list-content">
-                            <a className={isSearchShow ? "modal-window-input__action-list-link" : "modal-window-input__action-list-link modal-window-input__action-list-link--hide"} href="#">
+        <>
+            <header className="header">
+                <div className="modal-window-input">
+                    <div className={isHideModalWindow ? "modal-window-input__content" : "modal-window-input__content modal-window-input__content--hide"}>
+                        <div className="modal-window-input__bg" onClick={HideModalWindow}></div>
+                        <div className="modal-window-input__item">
+                            <div className="modal-window-input__wrapper-input">
                                 <span className="modal-window-input__search-span"><SearchSvg></SearchSvg></span>
-                                <span className="modal-window-input__action-list-output">{search}</span>
-                                <span className="modal-window-input__action-list-hint">Search all of GitHub</span>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div className="modal-window-input__item">
-                        <ul className="sub-menu__modal-window modal-window-list">
-                            <li className='modal-window-list__title-li'>Explore</li>
-                            <li className="modal-window-list__item">
-                                <a href="#" className="modal-window-list__link">
-                                    <ActionsSvg></ActionsSvg>
-                                    <div className="modal-window-list__wrapper">
-                                        <h6 className="modal-window-list__title">Actions</h6>
-                                    </div>
-                                    <span className="modal-window-input__action-list-hint">Learn More</span>
+                                <input className="modal-window-input__input" type="text" onChange={HandleSearchChange}/>
+                                <span className="modal-window-input__search-span modal-window-input__search-span--close"><CloseSvg></CloseSvg></span>
+                            </div>
+                            <div className="modal-window-input__action-list-content">
+                                <a className={isSearchShow ? "modal-window-input__action-list-link" : "modal-window-input__action-list-link modal-window-input__action-list-link--hide"} href="#">
+                                    <span className="modal-window-input__search-span"><SearchSvg></SearchSvg></span>
+                                    <span className="modal-window-input__action-list-output">{search}</span>
+                                    <span className="modal-window-input__action-list-hint">Search all of GitHub</span>
                                 </a>
-                            </li>
-                            <li className="modal-window-list__item">
-                                <a href="#" className="modal-window-list__link">
-                                    <ActionsSvg></ActionsSvg>
-                                    <div className="modal-window-list__wrapper">
-                                        <h6 className="modal-window-list__title">Actions</h6>
-                                    </div>
-                                    <span className="modal-window-input__action-list-hint">Learn More</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="modal-window-input__item">
-                        <a className="modal-window-input__link" href="#">Search syntax tips</a>
-                    </div>
-                </div>
-            </div>
-            <nav className="nav">
-                <div className="nav__wrapper">
-                    <a href="#" className="logo"><LogoSvg></LogoSvg></a>
-                    <ul className="nav__menu">
-                        <li className="nav__item"><a href="#" className="nav__link">product
-                        <span className="nav__span">
-                            <ArrowDownSvg></ArrowDownSvg>
-                        </span></a>
-                            <div className="nav__wrapper-sub-menu nav__wrapper-sub-menu--row">
-                                <ul className="sub-menu sub-menu__product">
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            <ActionsSvg></ActionsSvg>
-                                            <div className="sub-menu__wrapper">
-                                                <h6 className="sub-menu__title">Actions</h6>
-                                                <p className="sum-menu__text">Automate any workflow</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            <PackagesSvg></PackagesSvg>
-                                            <div className="sub-menu__wrapper">
-                                                <h6 className="sub-menu__title">Packages</h6>
-                                                <p className="sum-menu__text">Host and manage packages</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            <SecuritySvg></SecuritySvg>
-                                            <div className="sub-menu__wrapper">
-                                                <h6 className="sub-menu__title">Security</h6>
-                                                <p className="sum-menu__text">Find and fix vulnerabilities</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            <CodespacesSvg></CodespacesSvg>
-                                            <div className="sub-menu__wrapper">
-                                                <h6 className="sub-menu__title">Codespaces</h6>
-                                                <p className="sum-menu__text">Instant dev environments</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            <GitHubCopilotSvg></GitHubCopilotSvg>
-                                            <div className="sub-menu__wrapper">
-                                                <h6 className="sub-menu__title">GitHub Copilot</h6>
-                                                <p className="sum-menu__text">Write better code with AI</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            <CodeReviewSvg></CodeReviewSvg>
-                                            <div className="sub-menu__wrapper">
-                                                <h6 className="sub-menu__title">Code review</h6>
-                                                <p className="sum-menu__text">Manage code changes</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            <IssuesSvg></IssuesSvg>
-                                            <div className="sub-menu__wrapper">
-                                                <h6 className="sub-menu__title">Issues</h6>
-                                                <p className="sum-menu__text">Plan and track work</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            <DiscussionsSvg></DiscussionsSvg>
-                                            <div className="sub-menu__wrapper">
-                                                <h6 className="sub-menu__title">discussions</h6>
-                                                <p className="sum-menu__text">Collaborate outside of code</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul className="sub-menu sub-menu__product">
-                                    <li className='sub-menu__title-li'>Explore</li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            All features
-                                        </a>
-                                    </li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            Documentation <span className='sub-menu__span'><LinkSvg></LinkSvg></span>
-                                        </a>
-                                    </li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            GitHub Skills <span className='sub-menu__span'><LinkSvg></LinkSvg></span>
-                                        </a>
-                                    </li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            Blog <span className='sub-menu__span'><LinkSvg></LinkSvg></span>
-                                        </a>
-                                    </li>
-                                </ul>
                             </div>
-                        </li>
-                        <li className="nav__item"><a href="#" className="nav__link">Solutions
-                        <span className="nav__span">
-                            <ArrowDownSvg></ArrowDownSvg>
-                        </span></a>
-                            <div className="nav__wrapper-sub-menu nav__wrapper-sub-menu--column nav__wrapper-sub-menu--solutions">
-                                <ul className="sub-menu sub-menu__solutions">
-                                    <li className='sub-menu__title-li'>For</li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            Enterprise
-                                        </a>
-                                    </li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            Teams
-                                        </a>
-                                    </li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            Startups
-                                        </a>
-                                    </li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            Education  <span className='sub-menu__span'><LinkSvg></LinkSvg></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul className="sub-menu sub-menu__solutions">
-                                    <li className='sub-menu__title-li'>By Solution</li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            CI/CD & Automation
-                                        </a>
-                                    </li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            DevOps
-                                        </a>
-                                    </li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            DevSecOps <span className='sub-menu__span'><LinkSvg></LinkSvg></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul className="sub-menu sub-menu__solutions">
-                                    <li className='sub-menu__title-li'>Resources</li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            Learning Pathways <span className='sub-menu__span'><LinkSvg></LinkSvg></span>
-                                        </a>
-                                    </li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            White papers, Ebooks, Webinars <span className='sub-menu__span'><LinkSvg></LinkSvg></span>
-                                        </a>
-                                    </li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            Customer Stories
-                                        </a>
-                                    </li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            Partners  <span className='sub-menu__span'><LinkSvg></LinkSvg></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li className="nav__item"><a href="#" className="nav__link">Open source
-                        <span className="nav__span">
-                            <ArrowDownSvg></ArrowDownSvg>
-                        </span></a>
-                            <div className="nav__wrapper-sub-menu nav__wrapper-sub-menu--column nav__wrapper-sub-menu--open-source">
-                                <ul className="sub-menu sub-menu__open-source">
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            <div className="sub-menu__wrapper">
-                                                <h6 className="sub-menu__title">GitHub Sponsors</h6>
-                                                <p className="sum-menu__text">Fund open source developers</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul className="sub-menu sub-menu__open-source">
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            <div className="sub-menu__wrapper">
-                                                <h6 className="sub-menu__title">The ReadME Project</h6>
-                                                <p className="sum-menu__text">GitHub community article</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul className="sub-menu sub-menu__open-source">
-                                    <li className='sub-menu__title-li'>Repositories</li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            Topics
-                                        </a>
-                                    </li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            Trending
-                                        </a>
-                                    </li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            Collections
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li className="nav__item"><a href="#" className="nav__link">Enterprise
-                        <span className="nav__span">
-                            <ArrowDownSvg></ArrowDownSvg>
-                        </span></a>
-                            <div className="nav__wrapper-sub-menu nav__wrapper-sub-menu--column nav__wrapper-sub-menu--enterprise">
-                                <ul className="sub-menu sub-menu__enterprise">
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            <EnterprisePlatformSvg></EnterprisePlatformSvg>
-                                            <div className="sub-menu__wrapper">
-                                                <h6 className="sub-menu__title">Enterprise platform</h6>
-                                                <p className="sum-menu__text">AI-powered developer platform</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul className="sub-menu sub-menu__enterprise">
-                                    <li className='sub-menu__title-li'>Available add-ons</li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            <SecuritySvg></SecuritySvg>
-                                            <div className="sub-menu__wrapper">
-                                                <h6 className="sub-menu__title">Actions</h6>
-                                                <p className="sum-menu__text">Automate any workflow</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            <GitHubCopilotSvg></GitHubCopilotSvg>
-                                            <div className="sub-menu__wrapper">
-                                                <h6 className="sub-menu__title">Actions</h6>
-                                                <p className="sum-menu__text">Automate any workflow</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li className="sub-menu__item">
-                                        <a href="#" className="sub-menu__link">
-                                            <ActionsSvg></ActionsSvg>
-                                            <div className="sub-menu__wrapper">
-                                                <h6 className="sub-menu__title">Actions</h6>
-                                                <p className="sum-menu__text">Automate any workflow</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li className="nav__item"><a href="#" className="nav__link">Pricing</a></li>
-                    </ul>
-                </div>
-                <div className="nav__wrapper">
-                    <button className="nav__btn-search" onClick={ShowModalWindow}>
-                        <div className="nav__btn-wrapper">
-                            <span className="nav__btn-span nav__btn-span--search"><SearchSvg></SearchSvg></span>
-                            <span className="nav__btn-text">Search GitHub</span>
                         </div>
-                        <span className="nav__btn-span"><PathSvg></PathSvg></span>
-                    </button>
-                    <a className="nav__btn" href="#">Sign in</a>
-                    <a className="nav__btn nav__btn--border" href="#">Sign up</a>
+                        <div className="modal-window-input__item">
+                            <ul className="sub-menu__modal-window modal-window-list">
+                                <li className='modal-window-list__title-li'>Explore</li>
+                                <li className="modal-window-list__item">
+                                    <a href="#" className="modal-window-list__link">
+                                        <ActionsSvg></ActionsSvg>
+                                        <div className="modal-window-list__wrapper">
+                                            <h6 className="modal-window-list__title">Actions</h6>
+                                        </div>
+                                        <span className="modal-window-input__action-list-hint">Learn More</span>
+                                    </a>
+                                </li>
+                                <li className="modal-window-list__item">
+                                    <a href="#" className="modal-window-list__link">
+                                        <ActionsSvg></ActionsSvg>
+                                        <div className="modal-window-list__wrapper">
+                                            <h6 className="modal-window-list__title">Actions</h6>
+                                        </div>
+                                        <span className="modal-window-input__action-list-hint">Learn More</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="modal-window-input__item">
+                            <a className="modal-window-input__link" href="#">Search syntax tips</a>
+                        </div>
+                    </div>
                 </div>
-            </nav>
-            <div className="container">
+                <nav className="nav">
+                    <div className="nav__wrapper">
+                        <div className="nav__sign-up-wrapper">
+                            <SignUp></SignUp>
+                        </div>
+                        <a href="#" className="logo"><LogoSvg></LogoSvg></a>
+                        <div className="nav__inner">
+                            <ul className="nav__menu">
+                                <li className="nav__item"><a href="#" className="nav__link">product
+                                <span className="nav__span">
+                                    <ArrowDownSvg></ArrowDownSvg>
+                                </span></a>
+                                    <div className="nav__wrapper-sub-menu nav__wrapper-sub-menu--row">
+                                        <ul className="sub-menu sub-menu__product">
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    <ActionsSvg></ActionsSvg>
+                                                    <div className="sub-menu__wrapper">
+                                                        <h6 className="sub-menu__title">Actions</h6>
+                                                        <p className="sum-menu__text">Automate any workflow</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    <PackagesSvg></PackagesSvg>
+                                                    <div className="sub-menu__wrapper">
+                                                        <h6 className="sub-menu__title">Packages</h6>
+                                                        <p className="sum-menu__text">Host and manage packages</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    <SecuritySvg></SecuritySvg>
+                                                    <div className="sub-menu__wrapper">
+                                                        <h6 className="sub-menu__title">Security</h6>
+                                                        <p className="sum-menu__text">Find and fix vulnerabilities</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    <CodespacesSvg></CodespacesSvg>
+                                                    <div className="sub-menu__wrapper">
+                                                        <h6 className="sub-menu__title">Codespaces</h6>
+                                                        <p className="sum-menu__text">Instant dev environments</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    <GitHubCopilotSvg></GitHubCopilotSvg>
+                                                    <div className="sub-menu__wrapper">
+                                                        <h6 className="sub-menu__title">GitHub Copilot</h6>
+                                                        <p className="sum-menu__text">Write better code with AI</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    <CodeReviewSvg></CodeReviewSvg>
+                                                    <div className="sub-menu__wrapper">
+                                                        <h6 className="sub-menu__title">Code review</h6>
+                                                        <p className="sum-menu__text">Manage code changes</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    <IssuesSvg></IssuesSvg>
+                                                    <div className="sub-menu__wrapper">
+                                                        <h6 className="sub-menu__title">Issues</h6>
+                                                        <p className="sum-menu__text">Plan and track work</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    <DiscussionsSvg></DiscussionsSvg>
+                                                    <div className="sub-menu__wrapper">
+                                                        <h6 className="sub-menu__title">discussions</h6>
+                                                        <p className="sum-menu__text">Collaborate outside of code</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul className="sub-menu sub-menu__product">
+                                            <li className='sub-menu__title-li'>Explore</li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    All features
+                                                </a>
+                                            </li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    Documentation <span className='sub-menu__span'><LinkSvg></LinkSvg></span>
+                                                </a>
+                                            </li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    GitHub Skills <span className='sub-menu__span'><LinkSvg></LinkSvg></span>
+                                                </a>
+                                            </li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    Blog <span className='sub-menu__span'><LinkSvg></LinkSvg></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li className="nav__item"><a href="#" className="nav__link">Solutions
+                                <span className="nav__span">
+                                    <ArrowDownSvg></ArrowDownSvg>
+                                </span></a>
+                                    <div className="nav__wrapper-sub-menu nav__wrapper-sub-menu--column nav__wrapper-sub-menu--solutions">
+                                        <ul className="sub-menu sub-menu__solutions">
+                                            <li className='sub-menu__title-li'>For</li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    Enterprise
+                                                </a>
+                                            </li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    Teams
+                                                </a>
+                                            </li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    Startups
+                                                </a>
+                                            </li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    Education  <span className='sub-menu__span'><LinkSvg></LinkSvg></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul className="sub-menu sub-menu__solutions">
+                                            <li className='sub-menu__title-li'>By Solution</li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    CI/CD & Automation
+                                                </a>
+                                            </li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    DevOps
+                                                </a>
+                                            </li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    DevSecOps <span className='sub-menu__span'><LinkSvg></LinkSvg></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul className="sub-menu sub-menu__solutions">
+                                            <li className='sub-menu__title-li'>Resources</li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    Learning Pathways <span className='sub-menu__span'><LinkSvg></LinkSvg></span>
+                                                </a>
+                                            </li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    White papers, Ebooks, Webinars <span className='sub-menu__span'><LinkSvg></LinkSvg></span>
+                                                </a>
+                                            </li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    Customer Stories
+                                                </a>
+                                            </li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    Partners  <span className='sub-menu__span'><LinkSvg></LinkSvg></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li className="nav__item"><a href="#" className="nav__link">Open source
+                                <span className="nav__span">
+                                    <ArrowDownSvg></ArrowDownSvg>
+                                </span></a>
+                                    <div className="nav__wrapper-sub-menu nav__wrapper-sub-menu--column nav__wrapper-sub-menu--open-source">
+                                        <ul className="sub-menu sub-menu__open-source">
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    <div className="sub-menu__wrapper">
+                                                        <h6 className="sub-menu__title">GitHub Sponsors</h6>
+                                                        <p className="sum-menu__text">Fund open source developers</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul className="sub-menu sub-menu__open-source">
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    <div className="sub-menu__wrapper">
+                                                        <h6 className="sub-menu__title">The ReadME Project</h6>
+                                                        <p className="sum-menu__text">GitHub community article</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul className="sub-menu sub-menu__open-source">
+                                            <li className='sub-menu__title-li'>Repositories</li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    Topics
+                                                </a>
+                                            </li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    Trending
+                                                </a>
+                                            </li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    Collections
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li className="nav__item"><a href="#" className="nav__link">Enterprise
+                                <span className="nav__span">
+                                    <ArrowDownSvg></ArrowDownSvg>
+                                </span></a>
+                                    <div className="nav__wrapper-sub-menu nav__wrapper-sub-menu--column nav__wrapper-sub-menu--enterprise">
+                                        <ul className="sub-menu sub-menu__enterprise">
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    <EnterprisePlatformSvg></EnterprisePlatformSvg>
+                                                    <div className="sub-menu__wrapper">
+                                                        <h6 className="sub-menu__title">Enterprise platform</h6>
+                                                        <p className="sum-menu__text">AI-powered developer platform</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul className="sub-menu sub-menu__enterprise">
+                                            <li className='sub-menu__title-li'>Available add-ons</li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    <SecuritySvg></SecuritySvg>
+                                                    <div className="sub-menu__wrapper">
+                                                        <h6 className="sub-menu__title">Actions</h6>
+                                                        <p className="sum-menu__text">Automate any workflow</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    <GitHubCopilotSvg></GitHubCopilotSvg>
+                                                    <div className="sub-menu__wrapper">
+                                                        <h6 className="sub-menu__title">Actions</h6>
+                                                        <p className="sum-menu__text">Automate any workflow</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li className="sub-menu__item">
+                                                <a href="#" className="sub-menu__link">
+                                                    <ActionsSvg></ActionsSvg>
+                                                    <div className="sub-menu__wrapper">
+                                                        <h6 className="sub-menu__title">Actions</h6>
+                                                        <p className="sum-menu__text">Automate any workflow</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li className="nav__item"><a href="#" className="nav__link">Pricing</a></li>
+                            </ul>
+                            <div className="nav__wrapper-item">
+                                <button className="nav__btn-search" onClick={ShowModalWindow}>
+                                    <div className="nav__btn-wrapper">
+                                        <span className="nav__btn-span nav__btn-span--search"><SearchSvg></SearchSvg></span>
+                                        <span className="nav__btn-text">Search GitHub</span>
+                                    </div>
+                                    <span className="nav__btn-span"><PathSvg></PathSvg></span>
+                                </button>
+                                <a className="nav__btn" href="#">Sign in</a>
+                                <div className="nav__sign-up">
+                                    <SignUp></SignUp>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="burger-wrapper">
+                            <BurgerMenu></BurgerMenu>
+                        </div>
+                    </div>
+                </nav>
                 <HeaderContent></HeaderContent>
-            </div>
-        </header>
+            </header>
+            <SectionContent></SectionContent>
+            <Footer></Footer>
+        </>
     )
 }
