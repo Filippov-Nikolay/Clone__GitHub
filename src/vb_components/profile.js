@@ -5,6 +5,7 @@ import { Header}  from '../globalComponents/header/header.js'
 import { Nav } from '../globalComponents/nav/nav.js';
 import { Aside } from '../globalComponents/aside/aside.js';
 import { Overview } from './components/overview.js';
+import { Footer } from '../globalComponents/footer/footer.js'
 import RepoSearchInit from './repo_search_init/repo_search_init.js'
 
 
@@ -22,6 +23,7 @@ export function VbProfile() {
                     </div>
                 </div>
             </main>
+            <Footer/>
         </div>
     )
 }

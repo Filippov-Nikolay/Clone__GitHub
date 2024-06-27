@@ -3,6 +3,12 @@
     grid-row: 1;
 }
 
+
+
+.profile-container{
+
+}
+
 .profile-aside__logo{
 
 }
@@ -194,11 +200,10 @@
 
 
 @media screen and (max-width: 767px) {
-
     .profile-aside{
-        margin-left: 25px;
+        width: 100% !important;
     }
-
+    
    .profile-aside__logo{
     width: 62px;
    }

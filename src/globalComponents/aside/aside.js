@@ -41,7 +41,6 @@ function EmblemOrganizations() {
 export function Aside() {
     return (
         <aside className='profile-aside'>
-                
                 <div className='profile-aside__editor'>
                     {/* soon */}
                 </div>
