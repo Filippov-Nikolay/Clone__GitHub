@@ -8,8 +8,14 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-icons": "^5.2.1",
+    "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
+<<<<<<< HEAD
     "react-vanilla-tilt": "^1.0.0",
+=======
+    "typeface-noto-sans": "^1.1.13",
+>>>>>>> viacheslav_branch
     "web-vitals": "^2.1.4"
   },
   "scripts": {
