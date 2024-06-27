@@ -1,7 +1,12 @@
 .profile-aside{
     margin-top: 32px;
-    width: 296px;
     grid-row: 1;
+}
+
+
+
+.profile-container{
+
 }
 
 .profile-aside__logo{
@@ -151,7 +156,6 @@
 @media screen and (max-width: 1024px) {
     .profile-aside{
         margin-top: 32px;
-        width: 226px;
     }
 
     .profile-aside__btn-edit{
@@ -195,10 +199,31 @@
 }
 
 
-@media screen and (max-width: 768px) {
-   .profile-aside{
+@media screen and (max-width: 767px) {
+    .profile-aside{
+        width: 100% !important;
+    }
     
-    justify-content: center;
-    align-items: center;
+   .profile-aside__logo{
+    width: 62px;
+   }
+
+   .profile-aside__wrapper{
+        display: flex;
+        align-items: center;
+        gap: 35px;
+   }
+   .profile-aside__info{
+    display: none;
+   }
+   .profile-aside__achievements{
+    display: none;
+   }
+   .profile-aside__organizations{
+    display: none;
+   }
+   .profile-aside__btn-edit{
+    font-size: 16px;
+    width: 100.08%;
    }
 }
