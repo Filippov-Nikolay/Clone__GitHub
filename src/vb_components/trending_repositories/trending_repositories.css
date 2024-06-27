@@ -5,10 +5,14 @@
 }
 
 .trendingRepositories__title {
-    font-size: 24px;
+    display: flex;
+    font-size: 20px;
     margin-bottom: 10px;
 }
-
+.trendingRepositories-title__text{
+    margin-right: 5px;
+    margin-left: 5px;
+}
 .trendingRepositories__list {
     list-style-type: none;
     padding: 0;
