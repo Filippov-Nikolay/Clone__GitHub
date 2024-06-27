@@ -35,8 +35,8 @@
 .latest-changes__item::before {
     content: "";
     position: absolute;
-    left: 5px;
-    top: 10px;
+    left: 24px;
+    top: 16px;
     bottom: 0;
     width: 2px;
     background-color: #21262D;

@@ -14,6 +14,7 @@ import RecommendedUsers from './recommended_users/recommended_users';
 import Feed from './feed/feed';
 import LatestChanges from './latest_changes/latest_changes';
 import ExploreRepositories from './explore_repos/explore_repos';
+import { Footer } from '../globalComponents/footer/footer.js';
 const VbApp = () => {
     return (
         <div className="vb-app">
@@ -39,7 +40,9 @@ const VbApp = () => {
                 <ExploreRepositories />
                 </div>
             </div>
+            
             </div>
+            <Footer/>
         </div>
     );
 };
