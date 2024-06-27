@@ -114,3 +114,8 @@
 .vb-star {
 margin-right: 3px;
 }
+@media screen and (max-width: 370px) {
+    .recommendedUsers__list{
+        flex-wrap: wrap;
+    }
+}

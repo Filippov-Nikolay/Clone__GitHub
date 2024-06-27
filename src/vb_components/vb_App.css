@@ -29,8 +29,6 @@
     display: flex;
     flex-grow: 1;
     flex-wrap: nowrap;
-    margin-top: -81px; /* Temp */
-    position: absolute;
     width: 100%;
     height: auto;
     
@@ -38,7 +36,6 @@
   }
 .left-panel, .center-panel, .right-panel {
     padding: 10px;
-    margin-top: 70px; /* Высота вашего временного хедера + немного отступа */
 }
 
 .left-panel {
