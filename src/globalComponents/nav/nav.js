@@ -1,18 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import '../globalCss/nav.css';
 import { OverviewSVG, RepositoriesSVG, ProjectsSVG, PackagesSVG, StarsSVG, DotsSvg } from '../picture/SvgComponents.js';
 
 const navItems = [
-    { name: 'Overview', icon: <OverviewSVG /> , href: '/profile'},
+    { name: 'Overview', icon: <OverviewSVG />, href: '/profile' },
     { name: 'Repositories', icon: <RepositoriesSVG />, href: '/vb-profile' },
-    { name: 'Projects', icon: <ProjectsSVG /> },
-    { name: 'Packages', icon: <PackagesSVG /> },
-    { name: 'Stars', icon: <StarsSVG /> }
+    { name: 'Projects', icon: <ProjectsSVG />, href: '#' },
+    { name: 'Packages', icon: <PackagesSVG />, href: '#' },
+    { name: 'Stars', icon: <StarsSVG />, href: '#' }
 ];
 
 export function Nav() {
     const [activeIndex, setActiveIndex] = useState(null);
     const [showDropdown, setShowDropdown] = useState(false);
+    const location = useLocation();
+
+    useEffect(() => {
+        const currentPath = location.pathname;
+        const currentIndex = navItems.findIndex(item => item.href === currentPath);
+        setActiveIndex(currentIndex);
+    }, [location.pathname]);
 
     const handleItemClick = (index) => {
         setActiveIndex(index);
@@ -52,7 +60,7 @@ export function Nav() {
                                     className={`profile-dropdown-item ${activeIndex === index ? 'active' : ''}`}
                                     onClick={() => handleItemClick(index)}
                                 >
-                                    <a href='#' className='profile-dropdown-item-link'>
+                                    <a href={item.href} className='profile-dropdown-item-link'>
                                         {item.icon}
                                         <span className='profile-item-text'>{item.name}</span>
                                     </a>
