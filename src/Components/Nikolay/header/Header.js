@@ -504,11 +504,12 @@ function HeaderContent() {
             <CardFaster></CardFaster>
             <Collaboration></Collaboration>
             <CardCollaboration></CardCollaboration>
-            {/* <div className="global">
-                <video width="320" height="240" controls>
-                    <source src="https://github.githubassets.com/assets/aurora.h264-25af1afc4e69.mp4" type="video/mp4"/>
+            <div className="global">
+                <video width="916" height="918" loop="" muted="" playsinline="" preload="none" hidden="">
+                    <source type="video/mp4; codecs=hevc,mp4a.40.2" src="https://github.githubassets.com/assets/globe-900.hevc-58019d77b21c.mp4"/>
+                    <source type="video/mp4; codecs=avc1.4D401E,mp4a.40.2" src="https://github.githubassets.com/assets/globe-900.h264-975e7b5ac572.mp4"/>
                 </video>
-            </div> */}
+            </div>
         </div>
         </>
     )
