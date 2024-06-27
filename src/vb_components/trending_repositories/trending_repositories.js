@@ -29,7 +29,7 @@ const trendingRepositories = [
 const TrendingRepositories = () => {
     return (
         <div className="trendingRepositories">
-            <span className="trendingRepositories__title"><LuLineChart /> Trending repositories ·  <a href='#'> Show More </a></span>
+            <span className="trendingRepositories__title"><LuLineChart /><span className="trendingRepositories-title__text"> Trending repositories · </span> <a href='#' className='vb-ankor'> Show More </a></span>
             <ul className="trendingRepositories__list">
                 {trendingRepositories.map((repo, index) => (
                     <RepositoryCard 

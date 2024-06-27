@@ -7,6 +7,7 @@
     color: #c9d1d9;
     display: flex;
     align-items: center;
+
 }
 
 .vb-user-header {
@@ -49,6 +50,7 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     flex-direction: row;
+    margin-right: 10px;
 }
 .vb-user-info-wrapper{
 
@@ -63,7 +65,18 @@
 .vb-user-owner {
     color: #8b949e;
 }
-
+.vb-users-button{
+    background-color: #21262D;
+    border: 1px solid #8B949E;
+    color: #C9D1D9;
+    align-items: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 5px;
+}
+:active.vb-users-button{
+    background-color: #31363e;
+}
 .vb-user-name {
     color: #58a6ff;
     margin-left: 4px;

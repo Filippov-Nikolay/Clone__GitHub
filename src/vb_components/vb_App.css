@@ -51,7 +51,10 @@
     background-color: #010409;
     color: #fff;
 }
-
+.vb-ankor{
+    text-decoration: none;
+    color: #58A6FF;
+}
 @media screen and (max-width: 1120px)
 {
     .right-panel {display: none;}
@@ -61,6 +64,6 @@
 {
     .panels{flex-wrap: wrap;}
     .left-panel{width: 100%;}
-    .center-panel{padding-top: 0%; margin-top: 0;}
+    .center-panel{padding-top: 0%; margin-top: 0; width: 100%;}
 }
 

@@ -3,7 +3,7 @@ import './top_repositories.css';
 import chiragsingla17Image from '../sources/images/chiragsingla1716x16.png';
 import BuilderIOImage from '../sources/images/BuilderIO16x16.png';
 import UpVoxAiImage from '../sources/images/UpVoxAi16x16.png';
-import { FaBookBible } from "react-icons/fa6";
+import { GoRepo } from "react-icons/go";
 const repositories = [    
 { name: "Vector", image: chiragsingla17Image, author: "chiragsingla17" },
 { name: "MorphixUI", image: chiragsingla17Image, author: "chiragsingla17" },
@@ -21,7 +21,7 @@ const TopRepositories = () => {
         <div className="top-repositories">
            <div className='repository-header-wrapper'>
             <h2>Top Repositories</h2>
-            <button className="new-button"><FaBookBible /> New</button>
+            <button className="new-button"><GoRepo /> New</button>
             </div>
             <input type="text" placeholder="Find a repository..." class="input-placeholder" id="repoInput" />
             <ul className="repository-list">

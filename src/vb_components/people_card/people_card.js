@@ -13,7 +13,7 @@ const Users = ({ user,userName,userAvatar,description }) => {
                 <span className="vb-user-owner">{user}</span> <span className="vb-user-name">{userName}</span>
                 <div className="vb-user-description">{description}</div>
             </div>
-                <div className='vb-user-button'><button >Follow</button> </div>
+                <div className='users-button-wrapper'><button className='vb-users-button' >Follow</button> </div>
         </div>
             
        

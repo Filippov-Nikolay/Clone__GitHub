@@ -10,6 +10,9 @@
     height: 40px;
     margin-right: 10px;
 }
+.fork_text{
+    margin-left: 5px;
+}
 .forker__ankor
 {
     text-decoration: none;

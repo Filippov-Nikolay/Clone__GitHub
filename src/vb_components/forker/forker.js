@@ -9,9 +9,9 @@ const Forker = ({ forkerAvatar, forkerName,}) => {
                     <img src={forkerAvatar} alt={`${forkerName}'s avatar`} className="forker__avatar" />
                     <span className="forker__forkline"><RiGitForkLine /></span>
                 </div>  
-                <a href='#' className='forker__ankor'>{forkerName}</a>
+                <a href='#' className='vb-ankor'>{forkerName}</a>
                 
-                <span> forked a repository ·</span></div>     
+                <span className='fork_text'> forked a repository ·</span></div>     
     );
 };
 
