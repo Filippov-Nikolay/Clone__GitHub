@@ -10,6 +10,7 @@ const RepoSearchInit = () => {
             description: "A full modbus protocol written in python",
             language: "Python",
             languageColor: "#3572A5",
+            stars: "3",
             userAvatar: Avatar1
         },
         {
@@ -18,6 +19,7 @@ const RepoSearchInit = () => {
             description: "",
             language: "JavaScript",
             languageColor: "#f1e05a",
+            stars: "8",
             userAvatar: Avatar1
         },
         {

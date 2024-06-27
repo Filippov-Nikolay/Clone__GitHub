@@ -201,3 +201,34 @@ margin-right: 3px;
         padding: 3px 6px;
     }
 }
+
+@media screen and (max-width: 375px) {
+    .vb-repo-info {
+        padding: 10px;
+
+    }
+
+    .vb-repo-avatar {
+        width: 30px;
+        height: 30px;
+    }
+
+    .vb-repo-owner,
+    .vb-repo-name {
+        font-size: 14px;
+    }
+
+    .vb-description {
+        font-size: 12px;
+    }
+
+    .vb-language,
+    .vb-stars {
+        font-size: 12px;
+    }
+
+    .vb-repo-button-left,
+    .vb-repo-button-right {
+        display: none;
+    }
+}
