@@ -24,6 +24,15 @@
 
 }
 
+.profile-footer__logo{
+    cursor: pointer;
+    transition: 2s all;
+}
+
+.profile-footer__logo:hover svg path{
+    fill: #6e768198;
+}
+
 .profile-footer__list {
     display: flex;
     align-items: center;

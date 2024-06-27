@@ -7,7 +7,9 @@ export function Footer() {
         <footer className='profile-footer'>
             <div className='profile-footer__container'>
                 <div className='profile-footer__wrapper'>
-                    <LogoFooterSvg/>
+                    <div className='profile-footer__logo'>
+                        <LogoFooterSvg/>
+                    </div>
                     <div className='profile-footer__container--name'>
                         © 2023 GitHub, Inc.
                     </div>

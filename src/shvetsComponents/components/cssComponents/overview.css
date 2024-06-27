@@ -25,6 +25,11 @@
 
 .article__container--link{
     color: #58A6FF;
+    cursor: pointer;
+}
+
+.article__container--link:hover{
+  text-decoration: underline;
 }
 
 .article__container-btn{
@@ -142,7 +147,7 @@
   @media (max-width: 788px) {
     .section{
       margin-top: 34px;
-      margin-left: 0 !important;
+      margin-left: 15px !important;
   }
   }
 

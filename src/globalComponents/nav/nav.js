@@ -41,7 +41,7 @@ export function Nav() {
                         onClick={() => handleItemClick(index)}
                     >
                         <a href={item.href} className='profile-list__item-link'>
-                            {item.icon}
+                            <div className='profile-item--icon'>{item.icon}</div>
                             <span className='profile-item-text'>{item.name}</span>
                         </a>
                     </li>

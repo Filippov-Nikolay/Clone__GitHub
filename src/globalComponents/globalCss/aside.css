@@ -3,21 +3,7 @@
     grid-row: 1;
 }
 
-
-
-.profile-container{
-
-}
-
-.profile-aside__logo{
-
-}
-
 .profile-aside__editor{
-
-}
-
-.profile-aside__main{
 
 }
 
@@ -70,8 +56,11 @@
 .profile-aside__content-wrapper{
     display: flex;
     align-items: center;
-
     gap: 10px;
+}
+
+.profile-aside__content-wrapper:not(:last-child){
+    margin-bottom: 7px;
 }
 .profile-aside__links{
     color:  #8B949E;
@@ -85,7 +74,7 @@
     color: #C9D1D9 ;
 }
 
-.profile-aside__links:hover .aside__links-follow  {
+.profile-aside__links:hover .profile-aside__links-follow  {
     color: #58A6FF;
 }
 
@@ -102,7 +91,14 @@
 }
 .profile-link__social{
     color: #C9D1D9;
+    cursor: pointer;
 }
+
+.profile-link__social:hover{
+    color: #58A6FF;
+    text-decoration: underline;
+}
+
 
 .profile-aside__achievements{
     padding: 10px 0;
