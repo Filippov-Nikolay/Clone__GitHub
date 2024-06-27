@@ -862,7 +862,7 @@ export function Header() {
                         </div>
                         <span className="nav__btn-span"><PathSvg></PathSvg></span>
                     </button>
-                    <a className="nav__btn" href="#">Sign in</a>
+                    <a className="nav__btn" href="/vb-profile">Sign in</a>
                     <a className="nav__btn nav__btn--border" href="#">Sign up</a>
                 </div>
             </nav>
