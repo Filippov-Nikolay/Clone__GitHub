@@ -42,5 +42,6 @@
 @media screen and (max-width: 767px) {
     .vbb-profile-content {
         grid-template-columns: auto;
+        flex-wrap: wrap;
     }
 }
