@@ -216,6 +216,8 @@
 }
 
 .nav__wrapper {
+    position: relative;
+
     display: flex;
     align-items: center;
     gap: 10px;
@@ -814,7 +816,8 @@
     gap: 32px;
 }
 .card-content__item--column {
-    width: 50%;
+    /* width: 50%; */
+    height: 100%;
     flex-direction: column;
     justify-content: space-between;
 }

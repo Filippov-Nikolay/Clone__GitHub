@@ -13,6 +13,8 @@ import React, { useState, useRef } from "react";
 import debounce from 'lodash.debounce';
 import Tilt from 'react-vanilla-tilt'
 
+const perspectiveValue = 5000;
+
 function OurPartners() {
     return (
         <div className="our-partners">
@@ -61,7 +63,7 @@ function Card() {
 
     return (
         <div className="card-content">
-            <Tilt className='tilt-item' options={{ perspective: 5000, }} style={{ }}>
+            <Tilt className='tilt-item' options={{ perspective: perspectiveValue, }} style={{ }}>
                 <div className="card-content__item card-content__item--green" onMouseMove={(e) => handleMouseMove(e, 'cardRef1')} ref={cardRefs.cardRef1}>
                     <div className="card-content__main">
                         <h3 className="card-content__title">
@@ -75,32 +77,35 @@ function Card() {
                     </div>
                 </div>
             </Tilt>
-            
             <div className="card-content__wrapper-flex">
-                <div className="card-content__item card-content__item--green card-content__item--column" onMouseMove={(e) => handleMouseMove(e, 'cardRef2')} ref={cardRefs.cardRef2}> 
-                    <div className="card-content__main">
-                        <h3 className="card-content__title">
-                            <span className="card-content__span">GitHub Codespaces </span>
-                            offers a complete dev environment in seconds. Code, build, test, and open pull requests from any repo.
-                        </h3>
-                        <a href="#" className="btn-link">Check out GitHub Codespaces<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                <Tilt className='tilt-item' options={{ perspective: perspectiveValue, }} style={{ }}>
+                    <div className="card-content__item card-content__item--green card-content__item--column" onMouseMove={(e) => handleMouseMove(e, 'cardRef2')} ref={cardRefs.cardRef2}> 
+                        <div className="card-content__main">
+                            <h3 className="card-content__title">
+                                <span className="card-content__span">GitHub Codespaces </span>
+                                offers a complete dev environment in seconds. Code, build, test, and open pull requests from any repo.
+                            </h3>
+                            <a href="#" className="btn-link">Check out GitHub Codespaces<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                        </div>
+                        <div className="card-content__wrapper-img">
+                        <img src="https://github.githubassets.com/assets/illu-codespaces-1d2d17e8b2b7.png" alt=""/>
+                        </div>
                     </div>
-                    <div className="card-content__wrapper-img">
-                    <img src="https://github.githubassets.com/assets/illu-codespaces-1d2d17e8b2b7.png" alt=""/>
+                </Tilt>
+                <Tilt className='tilt-item' options={{ perspective: perspectiveValue, }} style={{ }}>
+                    <div className="card-content__item card-content__item--green card-content__item--column" onMouseMove={(e) => handleMouseMove(e, 'cardRef3')} ref={cardRefs.cardRef3}>
+                        <div className="card-content__main">
+                            <h3 className="card-content__title">
+                                <span className="card-content__span">GitHub Mobile and Copilot </span>
+                                now let you manage projects and converse with your AI pair programmer on the go.
+                            </h3>
+                            <a href="#" className="btn-link">Download GitHub Mobile<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                        </div>
+                        <div className="card-content__wrapper-img">
+                            <img src="https://github.githubassets.com/assets/illu-mobile-chat-9e7549906574.webp" alt=""/>
+                        </div>
                     </div>
-                </div>
-                <div className="card-content__item card-content__item--green card-content__item--column" onMouseMove={(e) => handleMouseMove(e, 'cardRef3')} ref={cardRefs.cardRef3}>
-                    <div className="card-content__main">
-                        <h3 className="card-content__title">
-                            <span className="card-content__span">GitHub Mobile and Copilot </span>
-                            now let you manage projects and converse with your AI pair programmer on the go.
-                        </h3>
-                        <a href="#" className="btn-link">Download GitHub Mobile<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
-                    </div>
-                    <div className="card-content__wrapper-img">
-                        <img src="https://github.githubassets.com/assets/illu-mobile-chat-9e7549906574.webp" alt=""/>
-                    </div>
-                </div>
+                </Tilt>
             </div>
             <div className='event event--card'>
                 <div className="event__interval-middle event__interval-middle--transparent-to-blue"></div>
@@ -129,43 +134,49 @@ function CardFaster() {
 
     return (
         <div className="card-content">
-            <div className="card-content__item card-content__item--blue" onMouseMove={(e) => handleMouseMove(e, 'cardRef1')} ref={cardRefs.cardRef1}>
-                <div className="card-content__main">
-                    <h3 className="card-content__title">
-                        <span className="card-content__span">Code scanning </span>
-                        is our code analysis tool that helps you remediate issues in your code.
-                    </h3>
-                    <a href="#" className="btn-link">Download the latest SAST ebook<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+            <Tilt className='tilt-item' options={{ perspective: perspectiveValue, }} style={{ }}>
+                <div className="card-content__item card-content__item--blue" onMouseMove={(e) => handleMouseMove(e, 'cardRef1')} ref={cardRefs.cardRef1}>
+                    <div className="card-content__main">
+                        <h3 className="card-content__title">
+                            <span className="card-content__span">Code scanning </span>
+                            is our code analysis tool that helps you remediate issues in your code.
+                        </h3>
+                        <a href="#" className="btn-link">Download the latest SAST ebook<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                    </div>
+                    <div className="card-content__wrapper-img">
+                        <img src="https://github.githubassets.com/assets/illu-code-scanning-fc9dfb212aa3.png" alt=""/>
+                    </div>
                 </div>
-                <div className="card-content__wrapper-img">
-                    <img src="https://github.githubassets.com/assets/illu-code-scanning-fc9dfb212aa3.png" alt=""/>
-                </div>
-            </div>
+            </Tilt>
             <div className="card-content__wrapper-flex">
-                <div className="card-content__item card-content__item--blue card-content__item--column" onMouseMove={(e) => handleMouseMove(e, 'cardRef2')} ref={cardRefs.cardRef2}> 
-                    <div className="card-content__main">
-                        <h3 className="card-content__title">
-                            <span className="card-content__span">Dependabot makes </span>
-                            it easy to find and fix vulnerable dependencies in your supply chain.
-                        </h3>
-                        <a href="#" className="btn-link">Explore Dependabot<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                <Tilt className='tilt-item' options={{ perspective: perspectiveValue, }} style={{ }}>
+                    <div className="card-content__item card-content__item--blue card-content__item--column" onMouseMove={(e) => handleMouseMove(e, 'cardRef2')} ref={cardRefs.cardRef2}> 
+                        <div className="card-content__main">
+                            <h3 className="card-content__title">
+                                <span className="card-content__span">Dependabot makes </span>
+                                it easy to find and fix vulnerable dependencies in your supply chain.
+                            </h3>
+                            <a href="#" className="btn-link">Explore Dependabot<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                        </div>
+                        <div className="card-content__wrapper-img">
+                        <img src="https://github.githubassets.com/assets/illu-dependabot-d98c73cc6724.png" alt=""/>
+                        </div>
                     </div>
-                    <div className="card-content__wrapper-img">
-                    <img src="https://github.githubassets.com/assets/illu-dependabot-d98c73cc6724.png" alt=""/>
+                </Tilt>
+                <Tilt className='tilt-item' options={{ perspective: perspectiveValue, }} style={{ }}>
+                    <div className="card-content__item card-content__item--blue card-content__item--column" onMouseMove={(e) => handleMouseMove(e, 'cardRef3')} ref={cardRefs.cardRef3}>
+                        <div className="card-content__main">
+                            <h3 className="card-content__title">
+                                <span className="card-content__span">Secret scanning </span>
+                                automatically looks for partner patterns and prevents fraudulent use of accidentally committed secrets.
+                            </h3>
+                            <a href="#" className="btn-link">Download GitHub Mobile<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                        </div>
+                        <div className="card-content__wrapper-img">
+                            <img src="https://github.githubassets.com/assets/illu-secret-scanning-2-88fb429376d6.png" alt=""/>
+                        </div>
                     </div>
-                </div>
-                <div className="card-content__item card-content__item--blue card-content__item--column" onMouseMove={(e) => handleMouseMove(e, 'cardRef3')} ref={cardRefs.cardRef3}>
-                    <div className="card-content__main">
-                        <h3 className="card-content__title">
-                            <span className="card-content__span">Secret scanning </span>
-                            automatically looks for partner patterns and prevents fraudulent use of accidentally committed secrets.
-                        </h3>
-                        <a href="#" className="btn-link">Download GitHub Mobile<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
-                    </div>
-                    <div className="card-content__wrapper-img">
-                        <img src="https://github.githubassets.com/assets/illu-secret-scanning-2-88fb429376d6.png" alt=""/>
-                    </div>
-                </div>
+                </Tilt>
             </div>
             <div className='event event--card'>
                 <div className="event__interval-middle event__interval-middle--transparent-to-pink"></div>
@@ -195,43 +206,49 @@ function CardCollaboration() {
     return (
         <>
             <div className="card-content card-collaboration">
-                <div className="card-content__item card-content__item--pink" onMouseMove={(e) => handleMouseMove(e, 'cardRef1')} ref={cardRefs.cardRef1}>
-                    <div className="card-content__main">
-                        <h3 className="card-content__title">
-                            <span className="card-content__span">GitHub Sponsors </span>
-                            lets you support your favorite open source maintainers and projects.
-                        </h3>
-                        <a href="#" className="btn-link">Invest with GitHub Sponsors<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                <Tilt className='tilt-item' options={{ perspective: perspectiveValue, }} style={{ }}>
+                    <div className="card-content__item card-content__item--pink" onMouseMove={(e) => handleMouseMove(e, 'cardRef1')} ref={cardRefs.cardRef1}>
+                        <div className="card-content__main">
+                            <h3 className="card-content__title">
+                                <span className="card-content__span">GitHub Sponsors </span>
+                                lets you support your favorite open source maintainers and projects.
+                            </h3>
+                            <a href="#" className="btn-link">Invest with GitHub Sponsors<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                        </div>
+                        <div className="card-content__wrapper-img">
+                            <img src="https://github.githubassets.com/assets/illu-code-scanning-fc9dfb212aa3.png" alt=""/>
+                        </div>
                     </div>
-                    <div className="card-content__wrapper-img">
-                        <img src="https://github.githubassets.com/assets/illu-code-scanning-fc9dfb212aa3.png" alt=""/>
-                    </div>
-                </div>
+                </Tilt>
                 <div className="card-content__wrapper-flex">
-                    <div className="card-content__item card-content__item--pink card-content__item--column" onMouseMove={(e) => handleMouseMove(e, 'cardRef2')} ref={cardRefs.cardRef2}> 
-                        <div className="card-content__main">
-                            <h3 className="card-content__title">
-                                <span className="card-content__span">GitHub Discussions </span>
-                                creates space to ask questions and have open-ended conversations.
-                            </h3>
-                            <a href="#" className="btn-link">Jump into GitHub Discussions<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                    <Tilt className='tilt-item' options={{ perspective: perspectiveValue, }} style={{ }}>
+                        <div className="card-content__item card-content__item--pink card-content__item--column" onMouseMove={(e) => handleMouseMove(e, 'cardRef2')} ref={cardRefs.cardRef2}> 
+                            <div className="card-content__main">
+                                <h3 className="card-content__title">
+                                    <span className="card-content__span">GitHub Discussions </span>
+                                    creates space to ask questions and have open-ended conversations.
+                                </h3>
+                                <a href="#" className="btn-link">Jump into GitHub Discussions<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                            </div>
+                            <div className="card-content__wrapper-img">
+                            <img src="https://github.githubassets.com/assets/illu-discussions-2-b915a6dd867e.png" alt=""/>
+                            </div>
                         </div>
-                        <div className="card-content__wrapper-img">
-                        <img src="https://github.githubassets.com/assets/illu-discussions-2-b915a6dd867e.png" alt=""/>
+                    </Tilt>
+                    <Tilt className='tilt-item' options={{ perspective: perspectiveValue, }} style={{ }}>
+                        <div className="card-content__item card-content__item--pink card-content__item--column" onMouseMove={(e) => handleMouseMove(e, 'cardRef3')} ref={cardRefs.cardRef3}>
+                            <div className="card-content__main">
+                                <h3 className="card-content__title">
+                                    <span className="card-content__span">Pull requests </span>
+                                    allow real-time communication and collaboration about code changes.
+                                </h3>
+                                <a href="#" className="btn-link">Check out pull requests<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                            </div>
+                            <div className="card-content__wrapper-img">
+                                <img src="https://github.githubassets.com/assets/illu-pull-requests-2-280cc958fc05.png" alt=""/>
+                            </div>
                         </div>
-                    </div>
-                    <div className="card-content__item card-content__item--pink card-content__item--column" onMouseMove={(e) => handleMouseMove(e, 'cardRef3')} ref={cardRefs.cardRef3}>
-                        <div className="card-content__main">
-                            <h3 className="card-content__title">
-                                <span className="card-content__span">Pull requests </span>
-                                allow real-time communication and collaboration about code changes.
-                            </h3>
-                            <a href="#" className="btn-link">Check out pull requests<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
-                        </div>
-                        <div className="card-content__wrapper-img">
-                            <img src="https://github.githubassets.com/assets/illu-pull-requests-2-280cc958fc05.png" alt=""/>
-                        </div>
-                    </div>
+                    </Tilt>
                 </div>
             </div>
             <div className="application-security">
@@ -297,18 +314,20 @@ function ApplicationSecurity() {
         <div className="card-content">
             <div className="productivity__main">
                 <div className="productivity-block-anime">
-                    <div className="card-content__item card-content__item--blue" onMouseMove={(e) => handleMouseMove(e, 'cardRef1')} ref={cardRefs.cardRef1}>
-                        <div className="card-content__main">
-                            <h3 className="card-content__title">
-                                <span className="card-content__span">GitHub Actions </span>
-                                automates your build, test, and deployment workflow with simple and secure CI/CD.
-                            </h3>
-                            <a href="#" className="btn-link">Discover GitHub Actions<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                    <Tilt className='tilt-item' options={{ perspective: perspectiveValue, }} style={{ }}>
+                        <div className="card-content__item card-content__item--blue" onMouseMove={(e) => handleMouseMove(e, 'cardRef1')} ref={cardRefs.cardRef1}>
+                            <div className="card-content__main">
+                                <h3 className="card-content__title">
+                                    <span className="card-content__span">GitHub Actions </span>
+                                    automates your build, test, and deployment workflow with simple and secure CI/CD.
+                                </h3>
+                                <a href="#" className="btn-link">Discover GitHub Actions<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
+                            </div>
+                            <div className="card-content__wrapper-img">
+                                <img src="https://github.githubassets.com/assets/illu-actions-2-c5178134f381.png" alt=""/>
+                            </div>
                         </div>
-                        <div className="card-content__wrapper-img">
-                            <img src="https://github.githubassets.com/assets/illu-actions-2-c5178134f381.png" alt=""/>
-                        </div>
-                    </div>
+                    </Tilt>
                     <img className='application-security__productivity-block-anime__blur productivity-block-anime__blur' src="https://github.githubassets.com/assets/bg-glow-blue-036b8dc2d1ce.png" alt=""/>
                     <div class="productivity-block-anime__second application-security__productivity-block-anime__second">
                         <img src="https://github.githubassets.com/assets/illu-ghas-list-84af1f1ce2b8.png" alt=""/>
