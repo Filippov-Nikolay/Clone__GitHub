@@ -4,7 +4,7 @@ import App from './App';
 import { Profile } from './shvetsComponents/profile';
 import { VbProfile } from './vb_components/profile';
 import  VbApp  from './vb_components/vb_App'
-import Index from './Nikolay/Index'
+import Index from './Nikolay/Index';
 const AppRouter = () => {
   return (
     <Router>

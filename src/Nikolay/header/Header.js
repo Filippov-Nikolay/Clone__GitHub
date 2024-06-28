@@ -9,11 +9,14 @@ import {
     LogoLinkedIn, LogoYouTube, LogoTwitch, LogoTikTok, LogoGitHub
 } from '../svgComponents/svgComponents'
 import logoNLO from '../img/header_element_nlo.png'
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import debounce from 'lodash.debounce';
+import useIntersectionObserver from './AnimationHook/UseIntersectionObserver';
 import Tilt from 'react-vanilla-tilt'
 
 const perspectiveValue = 5000;
+
+
 
 function OurPartners() {
     return (
@@ -61,6 +64,8 @@ function Card() {
     }
     }, 1);
 
+    const elementsRef = useIntersectionObserver('element-show');
+
     return (
         <div className="card-content">
             <Tilt className='tilt-item' options={{ perspective: perspectiveValue, }} style={{ }}>
@@ -87,8 +92,8 @@ function Card() {
                             </h3>
                             <a href="#" className="btn-link">Check out GitHub Codespaces<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
                         </div>
-                        <div className="card-content__wrapper-img">
-                        <img src="https://github.githubassets.com/assets/illu-codespaces-1d2d17e8b2b7.png" alt=""/>
+                        <div className="card-content__wrapper-img anim-block__card-img" ref={(el) => elementsRef.current[0] = el}>
+                            <img src="https://github.githubassets.com/assets/illu-codespaces-1d2d17e8b2b7.png" alt=""/>
                         </div>
                     </div>
                 </Tilt>
@@ -101,14 +106,14 @@ function Card() {
                             </h3>
                             <a href="#" className="btn-link">Download GitHub Mobile<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
                         </div>
-                        <div className="card-content__wrapper-img">
+                        <div className="card-content__wrapper-img anim-block__card-img" ref={(el) => elementsRef.current[1] = el}>
                             <img src="https://github.githubassets.com/assets/illu-mobile-chat-9e7549906574.webp" alt=""/>
                         </div>
                     </div>
                 </Tilt>
             </div>
             <div className='event event--card'>
-                <div className="event__interval-middle event__interval-middle--transparent-to-blue"></div>
+                <div className="event__interval-middle event__interval-middle--transparent-to-blue anim-block__interval-middle" ref={(el) => elementsRef.current[2] = el}></div>
             </div>
         </div>
     )
@@ -132,6 +137,8 @@ function CardFaster() {
     }
     }, 1);
 
+    const elementsRef = useIntersectionObserver('element-show');
+
     return (
         <div className="card-content">
             <Tilt className='tilt-item' options={{ perspective: perspectiveValue, }} style={{ }}>
@@ -143,7 +150,7 @@ function CardFaster() {
                         </h3>
                         <a href="#" className="btn-link">Download the latest SAST ebook<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
                     </div>
-                    <div className="card-content__wrapper-img">
+                    <div className="card-content__wrapper-img anim-block__card-content-wrapper-img-first" ref={(el) => elementsRef.current[0] = el}>
                         <img src="https://github.githubassets.com/assets/illu-code-scanning-fc9dfb212aa3.png" alt=""/>
                     </div>
                 </div>
@@ -158,8 +165,8 @@ function CardFaster() {
                             </h3>
                             <a href="#" className="btn-link">Explore Dependabot<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
                         </div>
-                        <div className="card-content__wrapper-img">
-                        <img src="https://github.githubassets.com/assets/illu-dependabot-d98c73cc6724.png" alt=""/>
+                        <div className="card-content__wrapper-img anim-block__card-content-wrapper-img-second" ref={(el) => elementsRef.current[1] = el}>
+                            <img src="https://github.githubassets.com/assets/illu-dependabot-d98c73cc6724.png" alt=""/>
                         </div>
                     </div>
                 </Tilt>
@@ -172,14 +179,14 @@ function CardFaster() {
                             </h3>
                             <a href="#" className="btn-link">Download GitHub Mobile<span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
                         </div>
-                        <div className="card-content__wrapper-img">
+                        <div className="card-content__wrapper-img anim-block__card-content-wrapper-img-tree" ref={(el) => elementsRef.current[2] = el}>
                             <img src="https://github.githubassets.com/assets/illu-secret-scanning-2-88fb429376d6.png" alt=""/>
                         </div>
                     </div>
                 </Tilt>
             </div>
             <div className='event event--card'>
-                <div className="event__interval-middle event__interval-middle--transparent-to-pink"></div>
+                <div className="event__interval-middle event__interval-middle--transparent-to-pink anim-block__event-middle-second" ref={(el) => elementsRef.current[3] = el}></div>
             </div>
         </div>
     )
@@ -294,18 +301,20 @@ function ApplicationSecurity() {
     }
     }, 1);
 
+    const elementsRef = useIntersectionObserver('element-show');
+
     return (
         <>
         <div className="application-security">
             <div className='event'>
-                <div className="event__middle event__middle--blue">
+                <div className="event__middle event__middle--blue anim-block__event-middle" ref={(el) => elementsRef.current[0] = el}>
                     <OcticonLock></OcticonLock>
                 </div>
-                <div className="event__interval-middle event__interval-middle--blue-to-transparent"></div>
+                <div className="event__interval-middle event__interval-middle--blue-to-transparent anim-block__interval-middle" ref={(el) => elementsRef.current[1] = el}></div>
             </div>
             <div className="application-security__content">
-                <h2 className="content-title">Application security</h2>
-                <h3 className="content-sub-title">
+                <h2 className="content-title anim-block__content-title" ref={(el) => elementsRef.current[2] = el}>Application security</h2>
+                <h3 className="content-sub-title anim-block__content-sub-title" ref={(el) => elementsRef.current[3] = el}>
                     <span class="content-sub-title__accent content-sub-title__accent--blue">Empower developers</span>
                     With GitHub, you can secure code in minutes.
                 </h3>
@@ -329,7 +338,7 @@ function ApplicationSecurity() {
                         </div>
                     </Tilt>
                     <img className='application-security__productivity-block-anime__blur productivity-block-anime__blur' src="https://github.githubassets.com/assets/bg-glow-blue-036b8dc2d1ce.png" alt=""/>
-                    <div class="productivity-block-anime__second application-security__productivity-block-anime__second">
+                    <div class="productivity-block-anime__second application-security__productivity-block-anime__second anim-block__productivity-block-anime-second-application" ref={(el) => elementsRef.current[4] = el}>
                         <img src="https://github.githubassets.com/assets/illu-ghas-list-84af1f1ce2b8.png" alt=""/>
                     </div>
                 </div>
@@ -344,13 +353,13 @@ function ApplicationSecurity() {
                 </div>
             </div>
             <div className="river__wrapper">
-                <div className="river__content">
+                <div className="river__content anim-block__river-content-seconds" ref={(el) => elementsRef.current[5] = el}>
                     <h2 className="river__title">
                         <span className='river__span-title'>GitHub Advanced Security</span> enables you to find and fix vulnerabilities with ease and ship secure code quickly.
                     </h2>
                     <a href="#" className="btn-link">Dive into GitHub Advanced Security <span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
                 </div>
-                <div className="fact fact--application-security">
+                <div className="fact fact--application-security anim-block__fact-second" ref={(el) => elementsRef.current[6] = el}>
                     <div className="fact__content">
                         <div className="fact__title-top fact__title-top--blue">Did you know?</div>
                         <h3 className="fact__title fact__title--blue">7x faster</h3>
@@ -378,6 +387,8 @@ function Collaboration() {
     }
     }, 1);
 
+    const elementsRef = useIntersectionObserver('element-show');
+
     return (
         <>
         <div className="application-security">
@@ -385,11 +396,11 @@ function Collaboration() {
                 <div className="event__middle event__middle--pink">
                     <OcticonCodeConduct></OcticonCodeConduct>
                 </div>
-                <div className="event__interval-middle event__interval-middle--pink-to-transparent"></div>
+                <div className="event__interval-middle event__interval-middle--pink-to-transparent anim-block__interval-middle-second" ref={(el) => elementsRef.current[2] = el}></div>
             </div>
             <div className="application-security__content">
-                <h2 className="content-title">Collaboration</h2>
-                <h3 className="content-sub-title">
+                <h2 className="content-title anim-block__content-title-second" ref={(el) => elementsRef.current[0] = el}>Collaboration</h2>
+                <h3 className="content-sub-title anim-block__content-sub-title-second" ref={(el) => elementsRef.current[1] = el}>
                     <span class="content-sub-title__accent content-sub-title__accent--pink">Supercharge collaboration</span>
                     GitHub helps your teams work more efficiently together.
                 </h3>
@@ -436,6 +447,8 @@ function Collaboration() {
     )
 }
 function River() {
+    const elementsRef = useIntersectionObserver('element-show');
+
     return (
         <div className="river">
             <div className='event'>
@@ -446,13 +459,13 @@ function River() {
                 </div>
             </div>
             <div className="river__wrapper">
-                <div className="river__content">
+                <div className="river__content anim-block__river-content" ref={(el) => elementsRef.current[1] = el}>
                     <h2 className="river__title">
                         <span className='river__span-title'>GitHub Copilot</span> empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.
                     </h2>
                     <a href="#" className="btn-link">Explore GitHub Copilot <span className='header-form__btn-decor-arrow'><ArrowSymbolMktg></ArrowSymbolMktg></span></a>
                 </div>
-                <div className="fact">
+                <div className="fact anim-block__fact" ref={(el) => elementsRef.current[2] = el}>
                     <div className="fact__content">
                         <div className="fact__title-top fact__title-top--green">Did you know?</div>
                         <h3 className="fact__title fact__title--green">22% increase</h3>
@@ -664,6 +677,8 @@ function Footer() {
     )
 }
 function SectionContent() {
+    const elementsRef = useIntersectionObserver('element-show');
+
     return (
         <div className="productivity">
             <div className="container">
@@ -672,11 +687,11 @@ function SectionContent() {
                         <div className="event__middle event__middle--green">
                             <OcticonBriefcase></OcticonBriefcase>
                         </div>
-                        <div className="event__interval-middle event__interval-middle--green-to-transparent"></div>
+                        <div className="event__interval-middle event__interval-middle--green-to-transparent anim-block__event-interval" ref={(el) => elementsRef.current[0] = el}></div>
                     </div>
                     <div className="productivity__event-info">
                         <h2 className="content-title">Productivity</h2>
-                        <h3 className="content-sub-title">
+                        <h3 className="content-sub-title"> 
                             <span class="content-sub-title__accent content-sub-title__accent--green">Accelerate innovation</span>
                             Our AI-powered platform increases the pace of software development.
                         </h3>
@@ -684,11 +699,11 @@ function SectionContent() {
                 </div>
                 <div className="productivity__main">
                     <div className="productivity-block-anime">
-                        <div className="productivity-block-anime__first">
+                        <div className="productivity-block-anime__first anim-block__productivity-block-anime-first" ref={(el) => elementsRef.current[1] = el}>
                             <img src="https://github.githubassets.com/assets/illu-copilot-editor-6474457a5b19.png" alt=""/>
                         </div>
-                        <img className='productivity-block-anime__blur' src="https://github.githubassets.com/assets/bg-glow-purple-6e9a6a96cb04.png" alt=""/>
-                        <div class="productivity-block-anime__second">
+                        <img className='productivity-block-anime__blur anim-block__productivity-block-anime' src="https://github.githubassets.com/assets/bg-glow-purple-6e9a6a96cb04.png" alt="" ref={(el) => elementsRef.current[2] = el}/>
+                        <div class="productivity-block-anime__second anim-block__productivity-block-anime-second" ref={(el) => elementsRef.current[3] = el}>
                             <img src="https://github.githubassets.com/assets/illu-copilot-sidebar-3d2efb504577.png" alt=""/>
                         </div>
                     </div>
@@ -732,6 +747,7 @@ function SectionContent() {
         </div>
     )
 }
+
 function HeaderContent() {
     document.addEventListener('DOMContentLoaded', (event) => {
         document.querySelector('.global__video').play();
@@ -784,7 +800,6 @@ function BurgerMenu() {
         </div>
     )
 }
-
 export function Header() {
     const [isHideModalWindow, setIsHideModalWindow] = useState(false);
     const [search, setSearchValue] = useState("");
@@ -1136,7 +1151,7 @@ export function Header() {
                                     </div>
                                     <span className="nav__btn-span"><PathSvg></PathSvg></span>
                                 </button>
-                                <a className="nav__btn" href="/Clone__GitHub/vb-app">Sign in</a>
+                                <a className="nav__btn" href="#">Sign in</a>
                                 <div className="nav__sign-up">
                                     <SignUp></SignUp>
                                 </div>

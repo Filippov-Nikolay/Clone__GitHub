@@ -1,0 +1,212 @@
+.anim-block__event-interval {
+    opacity: 0.5;
+    height: 0;
+
+    transition: all .8s ease;
+}
+.anim-block__event-interval.element-show {
+    opacity: 1;
+    height: 100%;
+}
+
+.anim-block__productivity-block-anime-first {
+    transform: translateX(100%);
+    opacity: 0;
+
+    transition: all .8s ease;
+}
+.anim-block__productivity-block-anime-first.element-show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.anim-block__productivity-block-anime-second {
+    transform: translate(100%, -70%);
+    opacity: 0;
+
+    transition: all .8s ease;
+}
+.anim-block__productivity-block-anime-second.element-show {
+    transform: translate(0, -70%);
+    opacity: 1;
+}
+
+.anim-block__productivity-block-anime {
+    opacity: 0;
+
+    transition: all 2s ease;
+}
+.anim-block__productivity-block-anime.element-show {
+    opacity: 1;
+}
+
+.anim-block__river-content {
+    transform: translateX(90px);
+    opacity: 0;
+
+    transition: all .9s ease;
+}
+.anim-block__river-content.element-show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.anim-block__fact {
+    transform: translateX(-100px);
+    opacity: 0;
+
+    transition: all .8s ease;
+}
+.anim-block__fact.element-show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.anim-block__card-img {
+    transform: scale(0);
+
+    transition: all .5s ease;
+}
+.anim-block__card-img.element-show {
+    transform: scale(1);
+
+    transition: all .7s ease;
+}
+
+.anim-block__interval-middle {
+    height: 0;
+
+    transition: all .9s ease;
+}
+.anim-block__interval-middle.element-show {
+    height: 100%;
+}
+
+.anim-block__event-middle {
+    opacity: 0;
+
+    transition: all 1.1s ease;
+}
+.anim-block__event-middle.element-show {
+    opacity: 1;
+}
+
+.anim-block__content-title {
+    transform: translateX(-100px);
+    opacity: 0;
+
+    transition: all .8s ease;
+}
+.anim-block__content-title.element-show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.anim-block__content-sub-title {
+    transform: translateX(-100px);
+    opacity: 0;
+
+    transition: all 1.2s ease;
+}
+.anim-block__content-sub-title.element-show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.anim-block__productivity-block-anime-second-application {
+    transform: translate(220px, -70%);
+    opacity: 0;
+
+    transition: all .5s ease;
+}
+.anim-block__productivity-block-anime-second-application.element-show {
+    transform: translate(0, -70%);
+    opacity: 1;
+}
+
+.anim-block__river-content-seconds {
+    transform: translateX(90px);
+    opacity: 0;
+
+    transition: all .9s ease;
+}
+.anim-block__river-content-seconds.element-show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.anim-block__fact-second {
+    transform: translateX(-100px);
+    opacity: 0;
+
+    transition: all .8s ease;
+}
+.anim-block__fact-second.element-show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.anim-block__card-content-wrapper-img-first {
+    transform: scale(0);
+
+    transition: all .5s ease;
+}
+.anim-block__card-content-wrapper-img-first.element-show {
+    transform: scale(1);
+}
+
+.anim-block__card-content-wrapper-img-second {
+    transform: scale(0);
+
+    transition: all .8s ease;
+}
+.anim-block__card-content-wrapper-img-second.element-show {
+    transform: scale(1);
+}
+
+.anim-block__card-content-wrapper-img-tree {
+    transform: scale(0);
+
+    transition: all .8s ease;
+}
+.anim-block__card-content-wrapper-img-tree.element-show {
+    transform: scale(1);
+}
+
+.anim-block__content-title-second {
+    transform: translateX(-100px);
+    opacity: 0;
+
+    transition: all .8s ease;
+}
+.anim-block__content-title-second.element-show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.anim-block__content-sub-title-second {
+    transform: translateX(-100px);
+    opacity: 0;
+
+    transition: all 1.2s ease;
+}
+.anim-block__content-sub-title-second.element-show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.anim-block__event-middle-second {
+    height: 0;
+    transition: all .9s ease;
+}
+.anim-block__event-middle-second.element-show {
+    height: 100%;
+}
+
+.anim-block__interval-middle-second {
+    height: 0;
+    transition: all .9s ease;
+}
+.anim-block__interval-middle-second.element-show {
+    height: 100%;
+}

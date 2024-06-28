@@ -5,6 +5,7 @@
 @import url('../css/applicationSecurity.css');
 @import url('../css/global.css');
 @import url('../css/footer.css');
+@import url('../css/animation.css');
 @import url('../css/adaptive.css');
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 body {
@@ -13,6 +14,7 @@ body {
     background-color: #0E1116;
 
     font-feature-settings: unset;
+    overflow-x: hidden;
 }
 
 .container {
@@ -21,6 +23,8 @@ body {
 
     max-width: 1280px;
     width: 100%;
+
+    /* overflow: hidden; */
 }
 
 /* WebKit scrollbar styles */

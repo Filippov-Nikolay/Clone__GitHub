@@ -218,6 +218,9 @@
         max-width: 250px;
         font-size: 32px;
     }
+    .global__wrapper {
+        width: 516px;
+    }
 }
 
 @media screen and (max-width: 575px) {
