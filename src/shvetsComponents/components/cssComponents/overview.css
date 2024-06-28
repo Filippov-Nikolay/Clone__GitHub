@@ -1,6 +1,6 @@
 .article{
     grid-column: 2;
-    min-width: 0;
+    width: 100%;
 }
 
 
