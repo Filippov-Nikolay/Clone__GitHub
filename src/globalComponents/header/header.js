@@ -82,7 +82,7 @@ export function Header() {
     <header className='profile-header'>
       <div className='profile-header__wrapper'>
         <div className='profile-header__logo'>
-          <a href='/vb-app'><LogoSVG /></a>
+          <a href='/Clone__GitHub/vb-app'><LogoSVG /></a>
         </div>
         <div className='profile-header__search-wrapper'>
           <button className="profile-btn-input">
@@ -131,7 +131,7 @@ export function Header() {
             )}
           </li>
           <li className='profile-content__item'>
-            <a href='/profile'><img className='profile-content__logo' src={LogoProfile} alt="Profile" /></a>
+            <a href='/Clone__GitHub/profile'><img className='profile-content__logo' src={LogoProfile} alt="Profile" /></a>
           </li>
         </ul>
       </div>

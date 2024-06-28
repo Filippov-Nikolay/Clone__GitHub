@@ -4,8 +4,8 @@ import '../globalCss/nav.css';
 import { OverviewSVG, RepositoriesSVG, ProjectsSVG, PackagesSVG, StarsSVG, DotsSvg } from '../picture/SvgComponents.js';
 
 const navItems = [
-    { name: 'Overview', icon: <OverviewSVG />, href: '/profile' },
-    { name: 'Repositories', icon: <RepositoriesSVG />, href: '/vb-profile' },
+    { name: 'Overview', icon: <OverviewSVG />, href: '/Clone__GitHub/profile' },
+    { name: 'Repositories', icon: <RepositoriesSVG />, href: '/Clone__GitHub/vb-profile' },
     { name: 'Projects', icon: <ProjectsSVG />, href: '#' },
     { name: 'Packages', icon: <PackagesSVG />, href: '#' },
     { name: 'Stars', icon: <StarsSVG />, href: '#' }

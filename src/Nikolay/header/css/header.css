@@ -3,6 +3,9 @@
 @import url('../css/fact.css');
 @import url('../css/main.css');
 @import url('../css/applicationSecurity.css');
+@import url('../css/global.css');
+@import url('../css/footer.css');
+@import url('../css/adaptive.css');
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 body {
     font-family: 'Noto+Sans', sans-serif;
@@ -13,10 +16,49 @@ body {
 }
 
 .container {
-    
-
     margin: 0 auto;
     padding: 0 20px;
 
     max-width: 1280px;
+    width: 100%;
 }
+
+/* WebKit scrollbar styles */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #141618;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Firefox scrollbar styles */
+html {
+    scrollbar-color: #888 #141618;
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #141618;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Firefox scrollbar styles */
+html {
+    scrollbar-color: #888 #141618;
+    scrollbar-width: thin;
+}
+
