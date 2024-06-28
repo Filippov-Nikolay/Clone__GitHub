@@ -43,3 +43,10 @@
     font-size: 14px;
     color: #666;
 }
+
+@media screen and (max-width: 375px) {
+    .recommendedUsers__list{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}

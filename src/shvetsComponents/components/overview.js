@@ -34,7 +34,7 @@ const pinnedItemsData = [
       icon: <StarSvg />,
     },
     {
-      title: 'deterministic-algorithms-lab/Rep_count',
+      title: 'determini-algorithms-lab',
       description: 'Python',
       iconD: <BlueSvg />,
       type: 'Public',
