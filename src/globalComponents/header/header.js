@@ -3,7 +3,7 @@ import '../globalCss/header.css';
 import { LogoSVG, NotificationSVG, MinusSVG, ProfileLogoSVG, SearchSvg, SearchSVG, PathSvg, CloseSvg } from '../picture/SvgComponents.js';
 import LogoProfile from '../picture/LogoProfile.png';
 
-// Utility function to shuffle an array
+// Перемешивает элементы массива в случайном порядке.
 const shuffleArray = (array) => {
   const shuffled = [...array];
   for (let i = shuffled.length - 1; i > 0; i--) {
@@ -13,7 +13,7 @@ const shuffleArray = (array) => {
   return shuffled;
 };
 
-// Utility function to get a random subset of the array
+// Выбирает случайное количество элементов из начала перемешанного массива
 const getRandomSubset = (array) => {
   const shuffled = shuffleArray(array);
   const randomLength = Math.floor(Math.random() * (shuffled.length + 1));

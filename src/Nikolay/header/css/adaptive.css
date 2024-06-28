@@ -49,7 +49,7 @@
 
         border-radius: 6px;
         background-color: #fff;
-        /* display: none; */
+        display: none;
     }
     .nav__inner .nav__menu {
         display: flex;
