@@ -1151,7 +1151,7 @@ export function Header() {
                                     </div>
                                     <span className="nav__btn-span"><PathSvg></PathSvg></span>
                                 </button>
-                                <a className="nav__btn" href="#">Sign in</a>
+                                <a className="nav__btn" href="/Clone__GitHub/vb-app">Sign in</a>
                                 <div className="nav__sign-up">
                                     <SignUp></SignUp>
                                 </div>
