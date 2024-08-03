@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Clone__GitHub/static/css/main.96bbaf04.css",
-    "main.js": "/Clone__GitHub/static/js/main.9d049025.js",
+    "main.css": "/Clone__GitHub/static/css/main.b1c0a962.css",
+    "main.js": "/Clone__GitHub/static/js/main.95ad8e9a.js",
     "static/js/453.c6dcf10a.chunk.js": "/Clone__GitHub/static/js/453.c6dcf10a.chunk.js",
     "static/media/bg.jpg": "/Clone__GitHub/static/media/bg.a16ac406247df175a925.jpg",
     "static/media/Achiev.svg": "/Clone__GitHub/static/media/Achiev.5235394dcb4c5e2c50b838f4d147e45c.svg",
@@ -16,12 +16,12 @@
     "static/media/Emblem2.svg": "/Clone__GitHub/static/media/Emblem2.8ce807ab4fe715c3453739bd77fb1882.svg",
     "static/media/logo.svg": "/Clone__GitHub/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Clone__GitHub/index.html",
-    "main.96bbaf04.css.map": "/Clone__GitHub/static/css/main.96bbaf04.css.map",
-    "main.9d049025.js.map": "/Clone__GitHub/static/js/main.9d049025.js.map",
+    "main.b1c0a962.css.map": "/Clone__GitHub/static/css/main.b1c0a962.css.map",
+    "main.95ad8e9a.js.map": "/Clone__GitHub/static/js/main.95ad8e9a.js.map",
     "453.c6dcf10a.chunk.js.map": "/Clone__GitHub/static/js/453.c6dcf10a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.96bbaf04.css",
-    "static/js/main.9d049025.js"
+    "static/css/main.b1c0a962.css",
+    "static/js/main.95ad8e9a.js"
   ]
 }
