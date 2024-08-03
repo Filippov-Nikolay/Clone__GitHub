@@ -121,7 +121,7 @@ export function ArrowSymbolMktg() {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path className="arrow-symbol-mk" fill="currentColor" d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"></path>
-            <path className="arrow-symbol-mktg" stroke="currentColor" d="M1.75 8H11" stroke-width="1.5" stroke-linecap="round"></path>
+            <path className="arrow-symbol-mktg" stroke="currentColor" d="M1.75 8H11" strokeWidth="1.5" strokeLinecap="round"></path>
         </svg>
     ) 
 }
@@ -186,5 +186,36 @@ export function LogoTikTok() {
 export function LogoGitHub() {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 16 16" width="20" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+    )
+}
+
+export function GitBranch({colorProps}) {
+    let color = colorProps === 'green' ? '#3fb950' : 
+                colorProps === 'blue' ? '#33b3ae' :
+                colorProps === 'pink' ? '#F778BA' : 
+                '#000';
+
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width="87" height="485" viewBox="0 0 87 485" fill="none" style={{display: 'block', marginLeft: '50%', maxWidth: '100%'}}>
+            <defs>
+                <linearGradient id={`dynamicGradient-${color}`} x1="24" y1="0" x2="22.5" y2="485" gradientUnits="userSpaceOnUse">
+                    <stop offset="0.0515742" stopColor={color} stopOpacity='0'/>
+                    <stop offset="0.225992" stopColor={color}/>
+                    <stop offset="0.47249" stopColor={color}/>
+                    <stop offset="0.522324" stopColor={color}/>
+                    <stop offset="0.561417" stopColor={color}/>
+                    <stop offset="0.791714" stopColor={color}/>
+                    <stop offset="0.956186" stopColor={color} stopOpacity='0'/>
+                </linearGradient>
+                <filter id={`filter-${colorProps}`} x="34" y="216.124" width="52.876" height="52.8762" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feDropShadow dx="0" dy="0" stdDeviation="10" floodColor={color}/>
+                </filter>
+            </defs>
+            <path d="M2.00026 0L2.00014 33.5188C2.00005 61.0048 12.3542 87.4821 31.0001 107.676V107.676C49.6458 127.871 60 154.348 60 181.834V301.665C60 329.451 49.6629 356.243 31.0001 376.829V376.829C12.3373 397.414 2.00022 424.207 2.00016 451.993L2.00009 485" stroke={`url(#dynamicGradient-${color})`} strokeWidth="3"/>
+            <g className="test" filter={`url(#filter-${colorProps})`}>
+                <circle r="6.43806" transform="matrix(1 0 0 -1 60.4381 242.562)" fill="black"/>
+                <circle r="4.93806" transform="matrix(1 0 0 -1 60.4381 242.562)" stroke="white" strokeWidth="3"/>
+            </g>
+        </svg>
     )
 }

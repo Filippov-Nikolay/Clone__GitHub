@@ -1,68 +1,47 @@
-@import url('../../../globalComponents/css/normalize.css');
-@import url('../css/event.css');
-@import url('../css/fact.css');
-@import url('../css/main.css');
-@import url('../css/applicationSecurity.css');
-@import url('../css/global.css');
-@import url('../css/footer.css');
-@import url('../css/animation.css');
-@import url('../css/adaptive.css');
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
-body {
-    font-family: 'Noto+Sans', sans-serif;
-
-    background-color: #0E1116;
-
-    font-feature-settings: unset;
-    overflow-x: hidden;
-}
-
-.container {
-    margin: 0 auto;
-    padding: 0 20px;
-
-    max-width: 1280px;
+.header {
     width: 100%;
 
-    /* overflow: hidden; */
+    color: #fff;
+
+    background: url('../../img/bg.jpg') no-repeat right top/cover;
 }
 
-/* WebKit scrollbar styles */
-::-webkit-scrollbar {
-    width: 12px;
+.burger-component-wrapper{
+    display: none;
 }
+.btn-link {
+    width: fit-content;
 
-::-webkit-scrollbar-track {
-    background: #141618;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+
+    color: #e6edf3;
+
+    transition: all .2s ease;
 }
+.btn-link::after {
+    content: '';
+    
+    margin-top: 5px;
+    
+    display: block;
 
-::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
+    width: 0;
+    height: 2px;
+    
+    background-color: #e6edf3;
+    transition: all .2s ease;
 }
-
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
+.btn-link:hover::after {
+    width: 100%;
 }
-
-/* Firefox scrollbar styles */
-html {
-    scrollbar-color: #888 #141618;
-    scrollbar-width: thin;
+.btn-link:hover .arrow-symbol-mktg {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
 }
-
-::-webkit-scrollbar-thumb {
-    background: #141618;
-    border-radius: 10px;
+.btn-link:hover .arrow-symbol-mk {
+    transform: translateX(0);
 }
-
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
+.btn-link {
 }
-
-/* Firefox scrollbar styles */
-html {
-    scrollbar-color: #888 #141618;
-    scrollbar-width: thin;
-}
-

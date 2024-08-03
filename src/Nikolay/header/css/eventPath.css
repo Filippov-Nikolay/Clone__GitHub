@@ -12,14 +12,6 @@
     margin: 0 50px;
     margin-bottom: 5px;
 }
-.event__start::before {
-    content: '';
-    display: block;
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-}
 .event__interval {
     margin: 0 50px;
 
@@ -35,9 +27,10 @@
     width: 3px;
     height: 100%;
 }
+.event__interval-middle--transparent-to-purple {
+    background: linear-gradient(transparent, #7C72FF 30%);
+}
 .event__interval-middle--purple-to-green {
-    height: 76%;
-
     background: linear-gradient(#7C72FF, #2DA44E 80%, #3FB950);
 }
 .event__interval-middle--transparent-to-green {
@@ -80,8 +73,6 @@
     height: 100%;
     filter: blur(18px);
 }
-.event__middle--purple {
-}
 .event__middle--purple::after {
     background-color: #7c72ff;
 }
@@ -100,8 +91,5 @@
 .event__interval-more-info {
     position: absolute;
     bottom: 50px;
-    left: 50%;
-}
-.event--card {
-    height: 200px;
+    width: 100%;
 }

@@ -85,6 +85,7 @@
 .footer-sub-content__wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 15px;
 }
 .footer-sub-content__item {
@@ -92,6 +93,7 @@
 }
 .footer-sub-content-menu__list {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     gap: 16px;
 
