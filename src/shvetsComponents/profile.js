@@ -12,6 +12,9 @@ import { Footer } from '../globalComponents/footer/footer.js';
 export function Profile() {
 
     return(
+        // 1290px - пропадает контейнер, на 1184 - появляется.
+        // Контейнер должен быть везде
+
         <div className='profile'>
             <Header/>
             <Nav/>

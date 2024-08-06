@@ -12,6 +12,8 @@ function EmblemOrganizations() {
     return (
         <div className='profile-aside__organizations'>
             <h3 className='profile-aside__title-name'>Organizations</h3>
+
+            {/* Реализовать через map */}
             <ul className='profile-organizations-emblem__list'>
                 <li className='profile-organizations-emblem__item'>
                     <a href='#'>

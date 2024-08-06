@@ -14,6 +14,8 @@ export function Footer() {
                         © 2023 GitHub, Inc.
                     </div>
                 </div>
+
+                {/* Реализуй через map */}
                 <ul className='profile-footer__list'>
                     <li className='profile-footer__item'>
                         <a href='#' className='profile-footer__link'>

@@ -46,6 +46,7 @@ const pinnedItemsData = [
     return (
       <div className="pinned-items-list">
         {pinnedItemsData.map((item, index) => (
+          // Реализовать через список
           <div key={index} className="pinned-item">
             <div className="pinned-item-header">
               <span className="pinned-item-title"> <BookSvg /> {item.title}</span>
@@ -70,33 +71,32 @@ const [isNotificationVisible, setIsNotificationVisible] = useState(true);
     setIsNotificationVisible(false);
   };
 
-    return(
-<article className='article'>
-      
-{isNotificationVisible && ( <section className='section notification'>
-          <div className='article__wrapper'>
-            <div className='article__container'>
-              <p className='article__container-text'>
-                You unlocked new Achievements with private contributions! Show them off by including private contributions in your profile in <span className='article__container--link'>settings</span>.
-              </p>
-              <div className='article__container-btn' onClick={handleExitClick}>
-                <ExitSvg />
+  return(
+    <article className='article'>
+        {isNotificationVisible && ( <section className='section notification'>
+            <div className='article__wrapper'>
+              <div className='article__container'>
+                <p className='article__container-text'>
+                  You unlocked new Achievements with private contributions! Show them off by including private contributions in your profile in <span className='article__container--link'>settings</span>.
+                </p>
+                <div className='article__container-btn' onClick={handleExitClick}>
+                  <ExitSvg />
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-      )}
-    <section className='section'>
-        <div className='article__wrapper'>
-            <div className='article__header'>
-                <p className='article__header-name'>Pinned</p>
-                <p className='article__header-edit'>Customize your pins</p>
+          </section>
+        )}
+        <section className='section'>
+            <div className='article__wrapper'>
+                <div className='article__header'>
+                    <p className='article__header-name'>Pinned</p>
+
+                    {/* Должно быть кнопкой */}
+                    <p className='article__header-edit'>Customize your pins</p>
+                </div>
+                <PinnedItems />
             </div>
-            <PinnedItems />
-        </div>
-    </section>
-
-</article>
-    )
-
+        </section>
+    </article>
+  )
 }

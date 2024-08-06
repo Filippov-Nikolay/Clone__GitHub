@@ -85,6 +85,7 @@ export function Header() {
           <a href='/Clone__GitHub/vb-app'><LogoSVG /></a>
         </div>
         <div className='profile-header__search-wrapper'>
+          {/* Можешь подключить мою навигацию. Уже) */}
           <button className="profile-btn-input">
             <div className="profile-btn-wrapper">
               <span className="profile-btn-span profile-btn-span--search"><SearchSvg /></span>
@@ -95,6 +96,7 @@ export function Header() {
           <button className='profile-btn__search'><SearchSVG /></button>
         </div>
         <div className='profile-header__content'>
+          {/* Создать массив объектов и использовать map */}
           <ul className='profile-content__wrapper'>
             <li className='profile-content__item'><a className='profile-content__item-link' href='#'>Pull requests</a></li>
             <li className='profile-content__item'><a className='profile-content__item-link' href='#'>Issues</a></li>
@@ -106,11 +108,15 @@ export function Header() {
       </div>
       <div className='profile-header__items'>
         <ul className='profile-content__wrapper'>
+          {/* Вынести "уведомления", как отдельный компонент */}
           <li className='profile-content__item'>
             <button onClick={toggleNotifications} className='notification-btn'>
+              {/* Переделать NotificationSVG. Реализовать через класс. Сделать обёртку для NotificationSVG
+              в которой будет класс с модификатором --red, --inherit*/}
               <NotificationSVG style={{ fill: unreadCount > 0 ? 'red' : 'inherit' }} />
               {unreadCount > 0 && <span className='notification-count'>{unreadCount}</span>}
             </button>
+
             {showNotifications && (
               <div className='notifications-dropdown' ref={dropdownRef}>
                 {notifications.length > 0 ? (
